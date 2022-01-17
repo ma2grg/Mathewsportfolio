@@ -2,30 +2,42 @@ import React from "react";
 import mathews from "../images/mathews.svg";
 import Digitaldesign from "../images/Digitaldesign.svg";
 import more from "../images/more.svg";
-import motiongraphics from "../images/motiongraphic.svg";
+import ui from "../images/motiongraphic.svg";
 import "../App.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <div class='homepage flex flex-row relative w-full h-full'>
+    <div class='homepage  w-full h-full'>
       <Link to="/typeof">
-      <img
-        className='Homerows    row1 absolute'
+      <motion.img 
+    //    drag
+    // dragConstraints={{
+    //   top: -50,
+    //   left: -50,
+    //   right: 50,
+    //   bottom: 50,
+    // }}
+        className='Homerows    row1 '
         src={Digitaldesign}
         alt='mathews'
       />
       </Link>
+      <Link to={`/motiongraphics`}>
       <div className=''>
-        <img className='Homerows   row2 absolute' src={more} alt='mathews' />
+        <img className='Homerows    row2 ' src={more} alt='mathews' />
       </div>
+      </Link>
+      <Link to="/greetingcards">
       <img
-        className='Homerows   row3 absolute'
-        src={motiongraphics}
+        className='Homerows   row3 '
+        src={ui}
         alt='mathews'
       />
+      </Link>
       <Link to={`/about`}>
-      <img className='Homerows  row4 absolute' src={mathews} alt='mathews' />
+      <img className='Homerows  row4 ' src={mathews} alt='mathews' />
    </Link>
     </div>
   );

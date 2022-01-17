@@ -37,12 +37,29 @@
   }
 }
 .homepage{
-
+position: relative;
 }
 .Homerows{
   width:25vw;
   height: 100vh;
 object-fit:cover;
+position: absolute;
+}
+@media only screen and (max-width:480px){
+  .Homerows{
+    width:100vw;
+    height: 100vh;
+    position: relative;
+  }
+  .row1,.row2,.row3,.row4
+  {
+    left: 0% !important;
+  }
+  .row1:hover,.row2:hover,.row3:hover,.row4:hover
+  {
+    left: 0% !important;
+    width: 100vw !important;
+  }
 }
 .row1{
   transition: ease-in 300ms;

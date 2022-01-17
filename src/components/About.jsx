@@ -13,7 +13,7 @@ function About() {
   return (
     <div className='p-16 w-full'>
       <section className='md:flex md:flex-row-reverse w-11/12 m-auto md:w-full '>
-        <img src={Mathewspic} className='w-full md:w-1/2 h-full' />
+        <img alt="maths" src={Mathewspic} className='w-full md:w-1/2 h-full' />
         <div style={{ fontFamily: "poppins" }} className=' mt-10'>
           <p className='text-5xl'>
             I'm <br />{" "}
@@ -41,27 +41,35 @@ function About() {
           So far so Good
         </p>
         <div className='flex flex-wrap justify-between items-center mt-16'>
-          <img src={c1} alt='' className='p-3 clientlogo w-36 object-contain ' />
-          <img src={c2} alt='' className='p-3 clientlogo w-36 object-contain  ' />
+          <img
+            src={c1}
+            alt=''
+            className='p-3 clientlogo md:w-36 object-contain '
+          />
+          <img
+            src={c2}
+            alt=''
+            className='p-3 clientlogo md:w-36  object-contain  '
+          />
           <img
             src={c3}
             alt=''
-            className='p-3 clientlogo w-36 object-contain h-14 '
+            className='p-3 clientlogo md:w-36  object-contain h-14 '
           />
           <img
             src={c4}
             alt=''
-            className='p-3 clientlogo w-36 object-contain h-14 '
+            className='p-3 clientlogo md:w-36  object-contain h-14 '
           />
           <img
             src={c5}
             alt=''
-            className='p-3 clientlogo w-36 object-contain h-1/12 '
+            className='p-3 clientlogo md:w-36  object-contain h-1/12 '
           />
           <img
             src={c6}
             alt=''
-            className='p-3 clientlogo w-36 object-contain h-1/12 '
+            className='p-3 clientlogo md:w-36  object-contain h-1/12 '
           />
         </div>
         <p className='mt-8' style={{ fontFamily: "poppins" }}>
@@ -143,7 +151,7 @@ function About() {
               style={{ fontWeight: "700", fontFamily: "poppins" }}>
               Hands on
             </p>
-            <img src={tools} className='w-2/3 mt-10 h-full items-center' />
+            <img alt="" src={tools} className='w-2/3 m-auto md:m-1 mt-4 md:mt-10 h-full items-center' />
           </div>
         </div>
       </section>
