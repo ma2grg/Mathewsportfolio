@@ -72,7 +72,7 @@ function Projects() {
         let xpos=x/window.innerWidth;
         //let ypos=y/window.innerHeight;
         //console.log(xpos,ypos);
-        if (xpos>0.85) {
+        if (xpos>0.75) {
           setState(1)
           console.log(state)
         //  return true;
@@ -83,7 +83,7 @@ function Projects() {
     },[state])
   return (
     <div className='w-full relative bg-gray-100' style={{ backgroundColor: "#f3f4f6" }}>
-      <div className="absolute" style={{right:0,display:`${state?"block":"none"}`}}>
+      <div className="absolute" style={{right:0,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
       </div>
       <div className="absolute">

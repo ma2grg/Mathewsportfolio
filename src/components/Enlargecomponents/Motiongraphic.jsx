@@ -1,14 +1,43 @@
 import React from "react";
 import motiongraphics from "../../images/motiongraphicsfull.svg";
 import arrow from "../../images/arrow.svg";
+import arrow2 from "../../images/arrowup.svg";
 import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
+import Sidebar from "../Sidebar"
 function Motiongraphic() {
+  const [state, setState] = React.useState(false);
+
+  React.useEffect(() => {
+    document.addEventListener("mousemove", (e) => {
+      let x = e.clientX;
+      //let y=e.clientY;
+      let xpos = x / window.innerWidth;
+      //let ypos=y/window.innerHeight;
+      //console.log(xpos,ypos);
+      if (xpos > 0.75) {
+        setState(1);
+        console.log(state);
+        //  return true;
+      } else setState(0);
+    });
+  }, [state]);
   return (
     <motion.div   animate={{ x: [0, 20, 0] }}
     transition={{ delay: .1 }}
       className=' md:flex md:flex-row-reverse w-full h-full '
       style={{ height: "100vh", fontFamily: "poppins" }}>
+          {state ? (
+          <div
+            className='absolute'
+            style={{
+              right: 0,
+              display: `${state ? "block" : "none"}`,
+              transition: "ease-in-out",
+            }}>
+            <Sidebar />
+          </div>
+        ) : null}
       <div style={{ flex: 1, backgroundColor: "rgb(101 104 159)" }}>
         <img
           src={motiongraphics}
@@ -25,9 +54,10 @@ function Motiongraphic() {
           media post
         </p>
         <p className='mt-2'>Social media post created for Adfolks LLC</p>
+        <Link to="/typeof" className="w-full"><img src={arrow2} alt='' className='w-8   h-8' style={{float:"right"}} /></Link>
         <div className='flex items-center justify-between mt-16 '>
         <Link to="/projects"> <p style={{ textDecoration: "underline" }}>View Project</p></Link>
-       <Link to ="/typeof">   <img src={arrow} alt='arrow' className='w-8 h-8' /></Link>
+       <Link to ="/greetingcards">   <img src={arrow} alt='arrow' className='w-8 h-8' /></Link>
         </div>
       </div>
       

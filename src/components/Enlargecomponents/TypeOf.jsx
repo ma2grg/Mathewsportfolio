@@ -3,12 +3,42 @@ import typeofi from "../../images/typeof.svg";
 import { Link } from "react-router-dom";
 import arrow from "../../images/arrow.svg";
 import {motion} from "framer-motion"
+import Sidebar from "../Sidebar";
+
 function TypeOf() {
+  const [state, setState] = React.useState(false);
+
+  React.useEffect(() => {
+    document.addEventListener("mousemove", (e) => {
+      let x = e.clientX;
+      //let y=e.clientY;
+      let xpos = x / window.innerWidth;
+      //let ypos=y/window.innerHeight;
+      //console.log(xpos,ypos);
+      if (xpos > 0.75) {
+        setState(1);
+        console.log(state);
+        //  return true;
+      } else setState(0);
+    });
+  }, [state]);
+
   return (
     <motion.div   animate={{ x: [0, 20, 0] }}
     transition={{ delay: 0.1 }}
       className=' md:flex md:flex-row-reverse w-full h-full '
       style={{ height: "100vh", fontFamily: "poppins" }}>
+             {state ? (
+          <div
+            className='absolute'
+            style={{
+              right: 0,
+              display: `${state ? "block" : "none"}`,
+              transition: "ease-in-out",
+            }}>
+            <Sidebar />
+          </div>
+        ) : null}
           <div className=' ' style={{ flex: 1, backgroundColor: "#00be6e" }}>
         <img
           src={typeofi}
@@ -25,7 +55,7 @@ function TypeOf() {
         <p className='mt-2'>A type layout expirement</p>
         <div className='flex items-center justify-between mt-16 '>
         <Link to="/projects"> <p style={{ textDecoration: "underline" }}>View Project</p></Link>
-         <Link to="/greetingcards"> <img src={arrow} alt='arrow' className='w-8 h-8' />
+         <Link to="/motiongraphics"> <img src={arrow} alt='arrow' className='w-8 h-8' />
    </Link>     </div>
       </div>
     

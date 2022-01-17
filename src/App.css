@@ -46,10 +46,14 @@ object-fit:cover;
 position: absolute;
 }
 @media only screen and (max-width:480px){
+  .sidebarr{
+    width:80vw;
+  }
   .Homerows{
     width:100vw;
     height: 100vh;
     position: relative;
+    object-fit: cover;
   }
   .row1,.row2,.row3,.row4
   {
@@ -103,4 +107,7 @@ position: absolute;
 }
 .social{
   text-decoration: underline;
+}
+.sidebarr{
+  height: 100vh;
 }

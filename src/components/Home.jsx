@@ -19,7 +19,9 @@ function Home() {
     //   right: 50,
     //   bottom: 50,
     // }}
-        className='Homerows    row1 '
+        className='Homerows   row1 shadow-inner
+
+        '
         src={Digitaldesign}
         alt='mathews'
       />
