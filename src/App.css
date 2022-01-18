@@ -49,6 +49,7 @@ position: absolute;
   .sidebarr{
     width:80vw;
   }
+  .bhm{display:block}
   .Homerows{
     width:100vw;
     height: 100vh;
@@ -110,4 +111,7 @@ position: absolute;
 }
 .sidebarr{
   height: 100vh;
+}
+.bhm{
+  display: none;
 }

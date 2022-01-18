@@ -3,31 +3,40 @@ import typeofi from "../../images/typeof.svg";
 import { Link } from "react-router-dom";
 import arrow from "../../images/arrow.svg";
 import {motion} from "framer-motion"
+import Hamburger from 'hamburger-react'
+
 import Sidebar from "../Sidebar";
 
 function TypeOf() {
   const [state, setState] = React.useState(false);
+  const [open,setopen]=React.useState(false)
 
+ 
   React.useEffect(() => {
+    if(window.innerWidth>=600){
     document.addEventListener("mousemove", (e) => {
       let x = e.clientX;
       //let y=e.clientY;
       let xpos = x / window.innerWidth;
-      //let ypos=y/window.innerHeight;
+    //  let ypos=y/window.innerHeight;
       //console.log(xpos,ypos);
-      if (xpos > 0.75) {
+      if (xpos > 0.75 && x>500) {
         setState(1);
         console.log(state);
         //  return true;
       } else setState(0);
-    });
-  }, [state]);
+    });}
+  });
 
   return (
     <motion.div   animate={{ x: [0, 20, 0] }}
     transition={{ delay: 0.1 }}
       className=' md:flex md:flex-row-reverse w-full h-full '
       style={{ height: "100vh", fontFamily: "poppins" }}>
+                <div className="md:hidden"><Hamburger toggle={()=>{setopen(!open)}} className="bhm flex md:hidden"/>
+        {/* <Sidebar /> */}</div>
+{  open?  <div className="absolute">  <Sidebar/></div>  :null
+}   
              {state ? (
           <div
             className='absolute'

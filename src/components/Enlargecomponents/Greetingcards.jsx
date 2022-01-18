@@ -5,24 +5,28 @@ import { Link } from "react-router-dom";
 import arrow2 from "../../images/arrowup.svg";
 import Sidebar from "../Sidebar";
 
+import Hamburger from 'hamburger-react'
+
+
 import { motion } from "framer-motion";
 function GreetingCard() {
-  const [state, setState] = React.useState(false);
-
+  const [open,setopen]=React.useState(false)
+  const [state, setState] = React.useState(0);
   React.useEffect(() => {
+    if(window.innerWidth>=600){
     document.addEventListener("mousemove", (e) => {
       let x = e.clientX;
       //let y=e.clientY;
       let xpos = x / window.innerWidth;
-      //let ypos=y/window.innerHeight;
+    //  let ypos=y/window.innerHeight;
       //console.log(xpos,ypos);
-      if (xpos > 0.75) {
+      if (xpos > 0.75 && x>500) {
         setState(1);
         console.log(state);
         //  return true;
       } else setState(0);
-    });
-  }, [state]);
+    });}
+  });
   return (
     <div>
       <motion.div
@@ -30,6 +34,10 @@ function GreetingCard() {
         transition={{ delay: 0.1 }}
         className=' md:flex md:flex-row-reverse w-full h-full '
         style={{ height: "100vh", fontFamily: "poppins" }}>
+                  <div className="md:hidden"><Hamburger toggle={()=>{setopen(!open)}} className="bhm flex md:hidden"/>
+        {/* <Sidebar /> */}</div>
+{  open?  <div className="absolute">  <Sidebar/></div>  :null
+}   
         {state ? (
           <div
             className='absolute'
