@@ -21,6 +21,8 @@ import p19 from "../images/p19.svg";
 import p20 from "../images/p20.svg";
 import Sidebar from "../components/Sidebar";
 import AOS from 'aos';
+import Hamburger from 'hamburger-react'
+
 
 
 const images = [
@@ -47,6 +49,8 @@ const images = [
 ];
 function Projects() {
   const [state,setState]=React.useState(false);
+  const [open,setopen]=React.useState(false)
+
   React.useEffect(() => {
     AOS.init({
       duration : 2000
@@ -65,27 +69,30 @@ function Projects() {
   //   }
   //   else return false
   // })
-    React.useEffect(()=>{
-      document.addEventListener("mousemove",(e)=>{
-        let x=e.clientX;
-        //let y=e.clientY;
-        let xpos=x/window.innerWidth;
-        //let ypos=y/window.innerHeight;
-        //console.log(xpos,ypos);
-        if (xpos>0.75) {
-          setState(1)
-          console.log(state)
+  React.useEffect(() => {
+    if(window.innerWidth>=600){
+    document.addEventListener("mousemove", (e) => {
+      let x = e.clientX;
+      //let y=e.clientY;
+      let xpos = x / window.innerWidth;
+    //  let ypos=y/window.innerHeight;
+      //console.log(xpos,ypos);
+      if (xpos > 0.75 && x>500) {
+        setState(1);
+        console.log(state);
         //  return true;
-        }
-        else setState(0)
-      })
-
-    },[state])
+      } else setState(0);
+    });}
+  });
   return (
     <div className='w-full relative bg-gray-100' style={{ backgroundColor: "#f3f4f6" }}>
       <div className="absolute" style={{right:0,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
       </div>
+      <div className="md:hidden bg-white"><Hamburger  toggle={()=>{setopen(!open)}} className="bhm flex md:hidden"/>
+        {/* <Sidebar /> */}</div>
+        {  open?  <div className="absolute">  <Sidebar/></div>  :null
+}    
       <div className="absolute">
       {images.map((image, index) => {
         return (
