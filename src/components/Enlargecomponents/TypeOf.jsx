@@ -56,16 +56,18 @@ function TypeOf() {
           // style={{ height: "100vh" }}
         />
       </div>
-      <div className='md:w-1/3 mt-12 md:mt-32 flex flex-col px-6 justify-center'>
-        <p className=' text-4xl md:text-5xl' style={{ fontWeight: 800 }}>
+      <div className='md:w-1/3 mt-12 md:mt-32 flex flex-col px-6 justify-center md:pb-24 md:justify-end'>
+        <p className=' text-4xl md:text-5xl lg:text-6xl' style={{ fontWeight: 800 }}>
           Type of <br />
           type
         </p>
-        <p className='mt-2'>A type layout expirement</p>
+        <p className='mt-2 text-xl' style={{color:"rgb(102 88 88)"}}>A type layout expirement</p>
+        <div className="py-2">
+
         <div className='flex items-center justify-between mt-16 '>
-        <Link to="/projects"> <p style={{ textDecoration: "underline" }}>View Project</p></Link>
+        <Link to="/projects"> <p className="text-xl" style={{ textDecoration: "underline" }}>View Project</p></Link>
          <Link to="/motiongraphics"> <img src={arrow} alt='arrow' className='w-8 h-8' />
-   </Link>     </div>
+   </Link>    </div> </div>
       </div>
     
     </motion.div>

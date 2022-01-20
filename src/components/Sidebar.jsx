@@ -6,11 +6,14 @@ import LinkedIn from "../images/LinkedIn.svg";
 import behance from "../images/behance.svg";
 import { Link } from "react-router-dom";
 import "../App.css"
+import { motion } from "framer-motion";
 //const imagess = [dribble, gmail, insta, LinkedIn, behance];
 
 function Sidebar() {
   return (
-    <div
+    <motion.div
+      animate={{ x: [0, 40, 0] }}
+      transition={{ delay: 0.2 }}
       className='sidebarr bg-white drop-shadow-2xl shadow-3xl relative h-full  flex flex-col justify-center items-center'
       style={{
         
@@ -56,7 +59,7 @@ function Sidebar() {
           <img src={behance} alt='' className='w-8  m-2 h-8' />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

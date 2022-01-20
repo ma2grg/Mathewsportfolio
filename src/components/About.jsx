@@ -11,9 +11,9 @@ import "../App.css";
 
 function About() {
   return (
-    <div className='p-16 w-full'>
+    <div className='p-16 w-full' style={{fontFamily:"Poppins"}}>
       <section className='md:flex md:flex-row-reverse w-11/12 m-auto md:w-full '>
-        <img alt="maths" src={Mathewspic} className='w-full md:w-2/3 h-full' />
+        <img alt="maths" src={Mathewspic} className='w-full md:w-3/5 h-full' />
         <div style={{ fontFamily: "poppins" }} className=' mt-10'>
           <p className='text-5xl'>
             I'm <br />{" "}
