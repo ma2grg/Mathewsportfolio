@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import p1 from "../images/p1.svg";
 import p2 from "../images/p2.svg";
 import p3 from "../images/p3.svg";
@@ -21,6 +21,7 @@ import p19 from "../images/p19.svg";
 import p20 from "../images/p20.svg";
 import Sidebar from "../components/Sidebar";
 import AOS from 'aos';
+import "aos/dist/aos.css"
 import Hamburger from 'hamburger-react'
 
 
@@ -51,11 +52,11 @@ function Projects() {
   const [state,setState]=React.useState(false);
   const [open,setopen]=React.useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     AOS.init({
       duration : 2000
     });
-  }, []);
+  },[]);
     
   // let mousepo=document.addEventListener("mousemove",(e)=>{
   //   let x=e.clientX;
@@ -79,13 +80,13 @@ function Projects() {
       //console.log(xpos,ypos);
       if (xpos > 0.75 && x>500) {
         setState(1);
-        console.log(state);
+        // console.log(state);
         //  return true;
       } else setState(0);
     });}
   });
   return (
-    <div className='w-full relative bg-gray-100' style={{ backgroundColor: "#f3f4f6" }}>
+    <div className='w-full relative bg-gray-100 dark:bg-black shadow-2xl' >
       <div className="absolute" style={{right:0,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
       </div>
@@ -96,7 +97,7 @@ function Projects() {
       <div className="absolute">
       {images.map((image, index) => {
         return (
-          <div           data-aos="fade-up-left"
+          <div           data-aos="fade-up" key={index}
           >
           <img
             draggable={false}

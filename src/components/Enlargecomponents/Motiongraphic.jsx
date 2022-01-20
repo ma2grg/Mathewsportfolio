@@ -21,7 +21,7 @@ function Motiongraphic() {
         //console.log(xpos,ypos);
         if (xpos > 0.75 && x > 500) {
           setState(1);
-          console.log(state);
+          // console.log(state);
           //  return true;
         } else setState(0);
       });
@@ -31,7 +31,7 @@ function Motiongraphic() {
     <motion.div
       animate={{ x: [0, 20, 0] }}
       transition={{ delay: 0.1 }}
-      className=' md:flex md:flex-row-reverse w-full h-full '
+      className=' md:flex md:flex-row-reverse w-full h-full dark:bg-gray-800'
       style={{ height: "100vh", fontFamily: "poppins" }}>
       <div className='md:hidden'>
         <Hamburger
@@ -70,13 +70,13 @@ function Motiongraphic() {
       </div>
       <div className='md:w-1/3 mt-12 md:mt-32 flex flex-col px-6 justify-center md:pb-24 md:justify-end '>
         <p
-          className='text-4xl md:text-5xl lg:text-6xl'
+          className='text-4xl md:text-5xl lg:text-6xl dark:text-white'
           style={{ fontWeight: 800 }}>
           Social
           <br />
           media post
         </p>
-        <p className='mt-2 text-xl' style={{ color: "rgb(102 88 88)" }}>
+        <p className='mt-2 text-xl dark:text-gray-300 text-gray-600' >
           Social media post created for Adfolks LLC
         </p>
         <div className='py-2'>
@@ -84,20 +84,20 @@ function Motiongraphic() {
             <img
               src={arrow2}
               alt=''
-              className='w-8   h-8'
+              className='w-8   h-8 dark:text-white dark:bg-white'
               style={{ float: "right" }}
             />
           </Link>
           <div className='flex items-center justify-between mt-16 '>
             <Link to='/projects'>
               {" "}
-              <p className='text-xl' style={{ textDecoration: "underline" }}>
+              <p className='text-xl dark:text-white' style={{ textDecoration: "underline" }}>
                 View Project
               </p>
             </Link>
             <Link to='/greetingcards'>
               {" "}
-              <img src={arrow} alt='arrow' className='w-8 h-8' />
+              <img src={arrow} alt='arrow' className='w-8 h-8 dark:bg-white' />
             </Link>
           </div>
         </div>

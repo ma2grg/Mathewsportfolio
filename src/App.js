@@ -9,10 +9,23 @@ import Motiongraphic from './components/Enlargecomponents/Motiongraphic';
 import GreetingCard from './components/Enlargecomponents/Greetingcards';
 import Projects from './components/Projects';
 import Brands from './components/Enlargecomponents/Brand';
+import { useEffect,useState } from 'react';
 
 function App() {
+  const [state,setState]=useState(false)
+
+  useEffect(() => {
+   let d=new Date();
+   let hour=d.getHours()
+   if(hour>=7 && hour<=17){
+     setState(false)
+   }
+   else setState(true)
+   
+  }, []);
+  
   return (
-    <div className="p-0 noscrollbar" style={{fontfamily:"poppins"}}>
+    <div className={`p-0 noscrollbar ${state?"dark":""} `} style={{fontfamily:"poppins"}}>
          <Routes>
          <Route path="/" element={<Home />} />
          <Route path="/about" element={<About />} />
