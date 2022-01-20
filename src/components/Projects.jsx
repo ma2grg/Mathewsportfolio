@@ -97,7 +97,7 @@ function Projects() {
       <div className="absolute">
       {images.map((image, index) => {
         return (
-          <div           data-aos="fade-up" key={index}
+          <div    className="dark:bg-black "       data-aos="fade-up" key={index}
           >
           <img
             draggable={false}
