@@ -140,7 +140,7 @@ function About() {
             <>
               <input
                 type='submit'
-                className='bg-black text-white md:w-1/4 p-2 my-4'></input>
+                className='bg-black mt-4 text-white md:w-1/4 p-2 my-4'></input>
             </>
           </div>
         </div>
