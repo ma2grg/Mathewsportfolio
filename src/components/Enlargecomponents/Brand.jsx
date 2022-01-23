@@ -34,8 +34,11 @@ function Brands() {
     <motion.div
       animate={{ x: [0, 20, 0] }}
       transition={{ delay: 0.1 }}
-      className=' md:flex md:flex-row-reverse w-full h-full dark:bg-gray-800'
+      className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
       style={{ height: "100vh", fontFamily: "poppins" }}>
+        <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
+       <Link to="/projects"> /projects</Link>
+      </div>
       <div className='md:hidden'>
         <Hamburger
           toggle={() => {
@@ -63,14 +66,14 @@ function Brands() {
           <Sidebar />
         </div>
       ) : null}
-      <div className=' ' style={{ flex: 1 }}>
+      <div className=' ' style={{ flex: 1 ,objectFit:"cover"}}>
         <img
           src={Brandsimg}
           alt='brand'
           className='shadow-xl w-full mt-10 md:mt-0 md:h-full'
         />
       </div>
-      <div className='md:w-1/3 mt-12 md:mt-32 flex flex-col px-6 justify-center md:pb-24 md:justify-end '>
+      <div className='md:w-1/3 mt-12 shadow-xl md:mt-32 flex flex-col px-6 justify-center md:pb-24 md:justify-end '>
         <p className='text-4xl md:text-5xl dark:text-white' style={{ fontWeight: 800 }}>
           Brand style
           <br />
@@ -83,7 +86,7 @@ function Brands() {
           <img
             src={arrow2}
             alt=''
-            className='w-8   h-8 dark:bg-white'
+            className='w-8   h-8 dark:bg-white  rounded-full'
             style={{ float: "right" }}
           />
         </Link>
@@ -95,7 +98,7 @@ function Brands() {
           </Link>
           <Link to='/typeof'>
             {" "}
-            <img src={arrow} alt='arrow' className='dark:bg-white w-8 h-8' />
+            <img src={arrow} alt='arrow' className='dark:bg-white w-8 h-8  rounded-full' />
           </Link>
         </div>
       </div>

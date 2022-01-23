@@ -44,6 +44,8 @@ position: relative;
   height: 100vh;
 object-fit:cover;
 position: absolute;
+box-shadow:-1px 0px 6px 4px rgb(4 1 1 / 47%)
+
 }
 @media only screen and (max-width:480px){
   .sidebarr{
@@ -114,4 +116,25 @@ position: absolute;
 }
 .bhm{
   display: none;
+}
+
+.bi-instagram,.bi-linkedin,.bi-dribbble,.bi-behance,.bi-envelope-fill{
+fill:black;
+margin: 8px;}
+.bi-instagram:hover{
+  fill: #CCCCCC;
+  /* background-color: red; */
+
+}
+.bi-linkedin:hover{
+  fill: #CCCCCC;
+}
+.bi-dribbble:hover{
+  fill: #CCCCCC;
+}
+.bi-behance:hover{
+  fill: #CCCCCC;
+}
+.bi-envelope-fill:hover{
+  fill: #CCCCCC;
 }

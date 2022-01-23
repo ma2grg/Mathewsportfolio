@@ -23,6 +23,7 @@ import Sidebar from "../components/Sidebar";
 import AOS from 'aos';
 import "aos/dist/aos.css"
 import Hamburger from 'hamburger-react'
+import { Link } from "react-router-dom";
 
 
 
@@ -70,7 +71,7 @@ function Projects() {
   //   }
   //   else return false
   // })
-  React.useEffect(() => {
+  
     if(window.innerWidth>=600){
     document.addEventListener("mousemove", (e) => {
       let x = e.clientX;
@@ -84,20 +85,25 @@ function Projects() {
         //  return true;
       } else setState(0);
     });}
-  });
+  
   return (
-    <div className='w-full relative bg-gray-100 dark:bg-black shadow-2xl' >
-      <div className="absolute" style={{right:0,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
+    <div className='w-full relative bg-gray-100  shadow-2xl' >
+      <div className="fixed " style={{right:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
+      </div>
+      <div className="fixed p-2 text-[#111111]" style={{left:0,zIndex:100,fontWeight:600,fontFamily:"poppins",display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
+      <Link to="/motiongraphics"> Motion Graphics/</Link>
+      <Link to="/typeof"> Social Media Post</Link>
+
       </div>
       <div className="md:hidden bg-white"><Hamburger  toggle={()=>{setopen(!open)}} className="bhm flex md:hidden"/>
         {/* <Sidebar /> */}</div>
         {  open?  <div className="absolute">  <Sidebar/></div>  :null
 }    
-      <div className="absolute">
+      <div className="absolute w-full " style={{left:"50%",transform:"translate(-50%)"}}>
       {images.map((image, index) => {
         return (
-          <div    className="dark:bg-black "       data-aos="fade-up" key={index}
+          <div    className=" mt-4"       data-aos="fade-up" key={index}
           >
           <img
             draggable={false}

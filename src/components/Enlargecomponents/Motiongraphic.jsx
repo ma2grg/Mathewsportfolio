@@ -31,8 +31,18 @@ function Motiongraphic() {
     <motion.div
       animate={{ x: [0, 20, 0] }}
       transition={{ delay: 0.1 }}
-      className=' md:flex md:flex-row-reverse w-full h-full dark:bg-gray-800'
+      className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
       style={{ height: "100vh", fontFamily: "poppins" }}>
+      <div
+        className='fixed p-2 dark:text-[#FAFAFA]'
+        style={{
+          left: 0,
+          zIndex: 100,
+          display: `${!state ? "block" : "none"}`,
+          transition: "ease-in-out",
+        }}>
+        <Link to='/projects'> /projects</Link>
+      </div>
       <div className='md:hidden'>
         <Hamburger
           toggle={() => {
@@ -76,7 +86,7 @@ function Motiongraphic() {
           <br />
           media post
         </p>
-        <p className='mt-2 text-xl dark:text-gray-300 text-gray-600' >
+        <p className='mt-2 text-xl dark:text-gray-300 text-gray-600'>
           Social media post created for Adfolks LLC
         </p>
         <div className='py-2'>
@@ -84,20 +94,26 @@ function Motiongraphic() {
             <img
               src={arrow2}
               alt=''
-              className='w-8   h-8 dark:text-white dark:bg-white'
+              className='w-8   h-8 dark:text-white dark:bg-white rounded-full'
               style={{ float: "right" }}
             />
           </Link>
           <div className='flex items-center justify-between mt-16 '>
             <Link to='/projects'>
               {" "}
-              <p className='text-xl dark:text-white' style={{ textDecoration: "underline" }}>
+              <p
+                className='text-xl dark:text-white'
+                style={{ textDecoration: "underline" }}>
                 View Project
               </p>
             </Link>
             <Link to='/greetingcards'>
               {" "}
-              <img src={arrow} alt='arrow' className='w-8 h-8 dark:bg-white' />
+              <img
+                src={arrow}
+                alt='arrow'
+                className='w-8 h-8 dark:bg-white  rounded-full'
+              />
             </Link>
           </div>
         </div>

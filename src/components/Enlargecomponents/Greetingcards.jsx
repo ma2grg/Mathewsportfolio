@@ -32,8 +32,11 @@ function GreetingCard() {
       <motion.div
         animate={{ x: [0, 20, 0] }}
         transition={{ delay: 0.1 }}
-        className=' md:flex md:flex-row-reverse w-full h-full dark:bg-gray-800'
+        className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
         style={{ height: "100vh", fontFamily: "poppins" }}>
+           <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
+       <Link to="/projects"> /projects</Link>
+      </div>
         <div className='md:hidden'>
           <Hamburger
             toggle={() => {
@@ -81,7 +84,7 @@ function GreetingCard() {
             <img
               src={arrow2}
               alt=''
-              className='w-8   h-8 dark:bg-white'
+              className='w-8   h-8 dark:bg-white rounded-full'
               style={{ float: "right" }}
             />
           </Link>
@@ -90,7 +93,7 @@ function GreetingCard() {
             <p className="text-xl dark:text-white" style={{ textDecoration: "underline" }}>View Project</p>
             <Link to='/brands'>
               {" "}
-              <img src={arrow} alt='arrow' className='dark:bg-white w-8 h-8' />
+              <img src={arrow} alt='arrow' className='dark:bg-white w-8 h-8  rounded-full' />
             </Link>
           </div>
         </div>
