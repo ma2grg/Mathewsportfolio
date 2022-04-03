@@ -41,7 +41,7 @@ function Motiongraphic() {
           display: `${!state ? "block" : "none"}`,
           transition: "ease-in-out",
         }}>
-        <Link to='/projects'> /projects</Link>
+        <Link to='/projects' className="hidden md:block"> /projects</Link>
       </div>
       <div className='md:hidden'>
         <Hamburger
@@ -78,7 +78,7 @@ function Motiongraphic() {
           // style={{ height: "100vh" }}
         />
       </div>
-      <div className='md:w-1/3 mt-12 md:mt-32 flex flex-col px-6 justify-center md:pb-24 md:justify-end '>
+      <div className='md:w-1/3 mt-12 md:mt-32 flex flex-col px-6 justify-center md:pb-16 md:justify-end '>
         <p
           className='text-4xl md:text-5xl lg:text-6xl dark:text-white'
           style={{ fontWeight: 800 }}>

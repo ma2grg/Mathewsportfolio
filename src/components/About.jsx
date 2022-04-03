@@ -31,10 +31,10 @@ function About() {
 
     <div className='p-16 w-full dark:bg-[#111111]' style={{fontFamily:"Poppins"}}>
         <div className="fixed " style={{right:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
+        <Sidebar /></div>
+      {/* </div>  <div className="absolute " style={{left:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
-      </div>  <div className="absolute " style={{left:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
-        <Sidebar />
-      </div>
+      </div> */}
       <section className='md:flex md:flex-row-reverse w-11/12 m-auto md:w-full '>
         <img alt="maths" src={Mathewspic} className='w-full md:w-3/5 h-full' />
         <div style={{ fontFamily: "poppins" }} className=' mt-10'>
