@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Brandsimg from "../../images/brands.svg";
 import arrow from "../../images/arrow.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import arrow2 from "../../images/arrowup.svg";
-import Hamburger from "hamburger-react";
+import { Squash as Hamburger } from 'hamburger-react'
 import Sidebar from "../Sidebar";
 import "../../App.css";
 
 function Brands() {
   const [open, setopen] = React.useState(false);
   const [state, setState] = React.useState(0);
+  // const [isOpen, setOpen] = useState(false)
+
   console.log("open", open);
 
   React.useEffect(() => {
@@ -36,22 +38,24 @@ function Brands() {
       transition={{ delay: 0.1 }}
       className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
       style={{ height: "100vh", fontFamily: "poppins" }}>
-        <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
+        <div className="fixed p-2 dark:text-[#FAFAFA] hidden md:flex" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
        <Link to="/projects"> /projects</Link>
       </div>
-      <div className='md:hidden'>
+      <div className='md:hidden '>
         <Hamburger
-          toggle={() => {
-            setopen(!open);
-          }}
-          className='bhm flex md:hidden'
+        direction="left"
+        duration={0.8}
+         toggled={open} toggle={setopen} 
+          className='bhm flex md:hidden dark:bg-[#a79b9b]'
+          color="#a79b9b"
+           
         />
         {/* <Sidebar /> */}
       </div>
       {open ? (
         <div className='absolute'>
           {" "}
-          <Sidebar />
+          <Sidebar mobile={true} />
         </div>
       ) : null}{" "}
       {state ? (
@@ -70,7 +74,7 @@ function Brands() {
         <img
           src={Brandsimg}
           alt='brand'
-          className='shadow-xl w-full mt-10 md:mt-0 md:h-full'
+          className='shadow-xl w-full mt-10 md:mt-0 md:h-full object-cover'
         />
       </div>
       <div className='md:w-1/3 mt-12 shadow-xl md:mt-32 flex flex-col px-6 justify-center md:pb-16 md:justify-end '>

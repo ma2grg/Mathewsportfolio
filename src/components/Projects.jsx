@@ -87,16 +87,16 @@ function Projects() {
     });}
   
   return (
-    <div className='w-full relative bg-gray-100  shadow-2xl' >
+    <div className='w-full relative bg-white  ' >
       <div className="fixed " style={{right:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
       </div>
-      <div className="fixed p-2 text-[#111111]" style={{left:0,zIndex:100,fontWeight:600,fontFamily:"poppins",display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
+      <div className=" p-2 text-[#111111] hidden md:flex" style={{left:0,zIndex:100,fontWeight:600,fontFamily:"poppins",display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
       <Link to="/motiongraphics"> Motion Graphics/</Link>
       <Link to="/typeof"> Social Media Post</Link>
 
       </div>
-      <div className="md:hidden bg-white"><Hamburger  toggle={()=>{setopen(!open)}} className="bhm flex md:hidden"/>
+      <div className="md:hidden fixed " style={{zIndex:111}}><Hamburger  toggle={()=>{setopen(!open)}} toggled={open} className="bhm flex md:hidden mt-4"/>
         {/* <Sidebar /> */}</div>
         {  open?  <div className="absolute">  <Sidebar/></div>  :null
 }    

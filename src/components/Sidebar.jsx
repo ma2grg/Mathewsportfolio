@@ -9,7 +9,7 @@ import "../App.css";
 import { motion } from "framer-motion";
 //const imagess = [dribble, gmail, insta, LinkedIn, behance];
 
-function Sidebar() {
+function Sidebar({mobile}) {
   return (
     <motion.div
       animate={{ x: [0, 40, 0] }}

@@ -42,7 +42,9 @@ function GreetingCard() {
             toggle={() => {
               setopen(!open);
             }}
+            toggled={open}
             className='bhm flex md:hidden'
+            color="#a79b9b"
           />
           {/* <Sidebar /> */}
         </div>

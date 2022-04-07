@@ -48,6 +48,8 @@ function Motiongraphic() {
           toggle={() => {
             setopen(!open);
           }}
+          toggled={open}
+          color="#a79b9b"
           className='bhm flex md:hidden'
         />
         {/* <Sidebar /> */}

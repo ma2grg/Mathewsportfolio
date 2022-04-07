@@ -1,5 +1,5 @@
 import React from "react";
-import Mathewspic from "../images/Mathewspic.svg";
+import Mathewspic from "../images/Mathewspic.jpg";
 import c1 from "../images/c1.svg";
 import c2 from "../images/c2.svg";
 import c3 from "../images/c3.svg";
@@ -29,14 +29,14 @@ function About() {
   
   return (
 
-    <div className='p-16 w-full dark:bg-[#111111]' style={{fontFamily:"Poppins"}}>
+    <div className='p-8 md:p-16 w-full dark:bg-[#111111]' style={{fontFamily:"Poppins"}}>
         <div className="fixed " style={{right:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar /></div>
       {/* </div>  <div className="absolute " style={{left:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
       </div> */}
       <section className='md:flex md:flex-row-reverse w-11/12 m-auto md:w-full '>
-        <img alt="maths" src={Mathewspic} className='w-full md:w-3/5 h-full' />
+        <img alt="maths" src={Mathewspic} className=' md:w-1/3' />
         <div style={{ fontFamily: "poppins" }} className=' mt-10'>
           <p className='text-6xl font-normal dark:text-[#fafafa]'>
             I'm <br />{" "}
@@ -48,7 +48,7 @@ function About() {
             Co-founder of{" "}
             <span style={{ color: "#CA06C2" }}>Mages Studio Pvt. Ltd.</span>
           </p>
-          <p className='mt-16 w-4/5 dark:text-[#fafafa]'>
+          <p className='mt-16  md:w-4/5 dark:text-[#fafafa]'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
             sit delectus neque libero voluptatibus debitis sequi, labore quae
             quibusdam ut tempora similique repellat vitae dolorem consectetur
@@ -59,11 +59,11 @@ function About() {
       </section>
       <section className='pt-12'>
         <p
-          className='text-5xl dark:text-[#fafafa]'
+          className=' text-4xl md:text-5xl dark:text-[#fafafa]'
           style={{ fontWeight: "700", fontFamily: "poppins" }}>
           So far so Good
         </p>
-        <div className='flex flex-wrap justify-between items-center mt-16'>
+        <div className='flex flex-col md:flex-row justify-between items-center mt-16'>
           <img
             src={c1}
             alt=''
@@ -179,7 +179,7 @@ function About() {
         </div>
       </section>
 
-      <footer className='flex justify-evenly items-center md:w-2/3 m-auto mt-24'>
+      <footer className=' flex flex-col md:flex-row justify-evenly items-center md:w-2/3 m-auto mt-24'>
         <a href='https://www.linkedin.com'>
           <p className='social dark:text-[#fafafa]'>LinkedIn</p>
         </a>{" "}

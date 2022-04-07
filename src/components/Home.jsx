@@ -21,7 +21,7 @@ function Home() {
           //   bottom: 50,
           // }}
           className='Homerows dd row1 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] hover:shadow-2xl row1 
-        bg-[#04be6e]
+        bg-[#04be6e] 
 
         '
           onHoverStart={() => {
@@ -44,12 +44,10 @@ function Home() {
             src={more}
             alt='mathews'
             onHoverStart={() => {
-              document.getElementById("ui").style.transform =
-                "translateX(3%)";
+              document.getElementById("ui").style.transform = "translateX(3%)";
             }}
             onHoverEnd={() => {
-              document.getElementById("ui").style.transform =
-                "translateX(-3%)";
+              document.getElementById("ui").style.transform = "translateX(-3%)";
             }}
           />
         </div>
@@ -64,12 +62,10 @@ function Home() {
             alt='mathews'
             onHoverStart={() => {
               // alert("hell");
-              document.getElementById("ui").style.transform =
-                "translateX(-4%)";
+              document.getElementById("ui").style.transform = "translateX(-4%)";
             }}
             onHoverEnd={() => {
-              document.getElementById("ui").style.transform =
-                "translateX(4%)";
+              document.getElementById("ui").style.transform = "translateX(4%)";
             }}
           />
         </div>
