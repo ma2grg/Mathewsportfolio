@@ -35,9 +35,9 @@ function GreetingCard() {
         className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
         style={{ height: "100vh", fontFamily: "poppins" }}>
            <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
-       <Link to="/projects" className="hidden md:block"> /projects</Link>
+       <Link to="/projects/2" className=" md:block"> /projects</Link>
       </div>
-        <div className='md:hidden'>
+        <div className='md:hidden' style={{marginLeft:"85%"}}>
           <Hamburger
             toggle={() => {
               setopen(!open);
@@ -79,7 +79,7 @@ function GreetingCard() {
             <br />
             cards
           </p>
-          <p className='mt-2 text-xl dark:text-gray-300 text-gray-600'>A type layout experiment</p>
+          <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>A type layout experiment</p>
           <div className='py-2'>
 
           <Link to='/motiongraphics' className='w-full'>
@@ -92,8 +92,10 @@ function GreetingCard() {
           </Link>
 
           <div className='flex items-center justify-between mt-16 '>
+          <Link to="/projects/2">
             <p className="text-xl dark:text-white" style={{ textDecoration: "underline" }}>View Project</p>
-            <Link to='/brands'>
+          
+          </Link>  <Link to='/brands'>
               {" "}
               <img src={arrow} alt='arrow' className='dark:bg-white w-8 h-8  rounded-full' />
             </Link>

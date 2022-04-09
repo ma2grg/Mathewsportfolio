@@ -41,7 +41,7 @@ function Sidebar({mobile}) {
           <p
             style={{ fontWeight: 800 }}
             className='text-4xl p-2 hover:text-gray-500'>
-            Motion Graphics
+            Branding
           </p>
         </Link>
         <Link to='/greetingcards'>

@@ -32,7 +32,10 @@ function App() {
          <Route path="/typeof" element={<TypeOf />} />
          <Route path="/motiongraphics" element={<Motiongraphic />} />
          <Route path="/greetingcards" element={<GreetingCard />} />
-         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<Projects />} >
+
+         <Route path=":projects" element={<Projects />} />
+         </Route>
          <Route path="/brands" element={<Brands />} />
         {/* <Route path="about" element={<About />} /> */}
       </Routes>

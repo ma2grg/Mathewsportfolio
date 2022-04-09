@@ -35,9 +35,9 @@ function TypeOf() {
       className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
       style={{ height: "100vh", fontFamily: "poppins" }}>
          <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
-       <Link to="/projects" className="hidden  md:block"> /projects</Link>
+       <Link to="/projects/4" className="  md:block"> /projects</Link>
       </div>
-      <div className='md:hidden'>
+      <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger
           toggle={() => {
             setopen(!open);
@@ -80,12 +80,12 @@ function TypeOf() {
           Type of <br />
           type
         </p>
-        <p className='mt-2 text-xl text-gray-600 dark:text-gray-300 font-light'>
+        <p className='mt-4 text-xl text-gray-600 dark:text-gray-300 font-light'>
           A type layout expirement
         </p>
         <div className='py-1'>
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects'>
+            <Link to='/projects/4'>
               {" "}
               <p
                 className='text-xl dark:text-white'

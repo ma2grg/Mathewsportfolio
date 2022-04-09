@@ -23,7 +23,7 @@ import Sidebar from "../components/Sidebar";
 import AOS from 'aos';
 import "aos/dist/aos.css"
 import Hamburger from 'hamburger-react'
-import { Link } from "react-router-dom";
+import { Link,useLocation,useParams } from "react-router-dom";
 
 
 
@@ -50,6 +50,17 @@ const images = [
   p20,
 ];
 function Projects() {
+  const params=useParams()
+  console.log(params)
+  let url=params.projects;
+  let linked="/typeof"
+  let url2="branding"
+  if(url==="1"){url2="branding" ;linked="/brands"
+  }else if(url==="2") {url2="Greeting Card";linked="/greetingcards"}
+  else if(url==="3"){ url2="Motion Graphics";linked="/motiongraphics"}
+  else if(url==="4"){ url2="Type Of";linked="/typeof"}
+
+
   const [state,setState]=React.useState(false);
   const [open,setopen]=React.useState(false)
 
@@ -92,11 +103,13 @@ function Projects() {
         <Sidebar />
       </div>
       <div className=" p-2 text-[#111111] hidden md:flex" style={{left:0,zIndex:100,fontWeight:600,fontFamily:"poppins",display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
-      <Link to="/motiongraphics"> Motion Graphics/</Link>
+            <Link to="/"> Home/</Link>
+
+      <Link to={`${linked}`}> {url2}/</Link>
       <Link to="/typeof"> Social Media Post</Link>
 
       </div>
-      <div className="md:hidden fixed " style={{zIndex:111}}><Hamburger  toggle={()=>{setopen(!open)}} toggled={open} className="bhm flex md:hidden mt-4"/>
+      <div className="md:hidden  " style={{zIndex:111,marginLeft:"85%"}}><Hamburger  toggle={()=>{setopen(!open)}} toggled={open} className="bhm flex md:hidden mt-4" style={{marginLeft:"85%"}}/>
         {/* <Sidebar /> */}</div>
         {  open?  <div className="absolute">  <Sidebar/></div>  :null
 }    

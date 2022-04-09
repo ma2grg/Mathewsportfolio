@@ -41,9 +41,9 @@ function Motiongraphic() {
           display: `${!state ? "block" : "none"}`,
           transition: "ease-in-out",
         }}>
-        <Link to='/projects' className="hidden md:block"> /projects</Link>
+        <Link to='/projects/3' className=" md:block"> /projects</Link>
       </div>
-      <div className='md:hidden'>
+      <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger
           toggle={() => {
             setopen(!open);
@@ -88,7 +88,7 @@ function Motiongraphic() {
           <br />
           media post
         </p>
-        <p className='mt-2 text-xl dark:text-gray-300 text-gray-600'>
+        <p className='mt-4 text-xl dark:text-gray-300 text-gray-600  font-light '>
           Social media post created for Adfolks LLC
         </p>
         <div className='py-2'>
@@ -101,7 +101,7 @@ function Motiongraphic() {
             />
           </Link>
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects'>
+            <Link to='/projects/3'>
               {" "}
               <p
                 className='text-xl dark:text-white'
