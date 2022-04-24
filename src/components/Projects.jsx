@@ -20,12 +20,10 @@ import p18 from "../images/p18.svg";
 import p19 from "../images/p19.svg";
 import p20 from "../images/p20.svg";
 import Sidebar from "../components/Sidebar";
-import AOS from 'aos';
-import "aos/dist/aos.css"
-import Hamburger from 'hamburger-react'
-import { Link,useLocation,useParams } from "react-router-dom";
-
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Hamburger from "hamburger-react";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const images = [
   p1,
@@ -50,26 +48,34 @@ const images = [
   p20,
 ];
 function Projects() {
-  const params=useParams()
-  console.log(params)
-  let url=params.projects;
-  let linked="/typeof"
-  let url2="branding"
-  if(url==="1"){url2="branding" ;linked="/brands"
-  }else if(url==="2") {url2="Greeting Card";linked="/greetingcards"}
-  else if(url==="3"){ url2="Motion Graphics";linked="/motiongraphics"}
-  else if(url==="4"){ url2="Type Of";linked="/typeof"}
+  const params = useParams();
+  console.log(params);
+  let url = params.projects;
+  let linked = "/typeof";
+  let url2 = "branding";
+  if (url === "1") {
+    url2 = "branding";
+    linked = "/brands";
+  } else if (url === "2") {
+    url2 = "Greeting Card";
+    linked = "/greetingcards";
+  } else if (url === "3") {
+    url2 = "Motion Graphics";
+    linked = "/motiongraphics";
+  } else if (url === "4") {
+    url2 = "Type Of";
+    linked = "/typeof";
+  }
 
-
-  const [state,setState]=React.useState(false);
-  const [open,setopen]=React.useState(false)
+  const [state, setState] = React.useState(false);
+  const [open, setopen] = React.useState(false);
 
   useEffect(() => {
     AOS.init({
-      duration : 2000
+      duration: 2000,
     });
-  },[]);
-    
+  }, []);
+
   // let mousepo=document.addEventListener("mousemove",(e)=>{
   //   let x=e.clientX;
   //   let y=e.clientY;
@@ -82,52 +88,84 @@ function Projects() {
   //   }
   //   else return false
   // })
-  
-    if(window.innerWidth>=600){
+
+  if (window.innerWidth >= 600) {
     document.addEventListener("mousemove", (e) => {
       let x = e.clientX;
       //let y=e.clientY;
       let xpos = x / window.innerWidth;
-    //  let ypos=y/window.innerHeight;
+      //  let ypos=y/window.innerHeight;
       //console.log(xpos,ypos);
-      if (xpos > 0.75 && x>500) {
+      if (xpos > 0.75 && x > 500) {
         setState(1);
         // console.log(state);
         //  return true;
       } else setState(0);
-    });}
-  
+    });
+  }
+
   return (
-    <div className='w-full relative bg-white  ' >
-      <div className="fixed " style={{right:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
+    <div className='w-full relative bg-white  '>
+      <div
+        className='fixed '
+        style={{
+          right: 0,
+          zIndex: 100,
+          display: `${state ? "block" : "none"}`,
+          transition: "ease-in-out",
+        }}>
         <Sidebar />
       </div>
-      <div className=" p-2 text-[#111111] hidden md:flex" style={{left:0,zIndex:100,fontWeight:600,fontFamily:"poppins",display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
-            <Link to="/"> Home/</Link>
+      <div
+        className='text-sm md:text-lg p-3  text-[#111111] hidden md:flex'
+        style={{
+          left: 0,
+          zIndex: 100,
+          fontWeight: 600,
+          fontFamily: "poppins",
+          display: `${!state ? "block" : "none"}`,
+          transition: "ease-in-out",
+        }}>
+        <Link to='/'> Home/</Link>
 
-      <Link to={`${linked}`}> {url2}/</Link>
-      <Link to="/typeof"> Social Media Post</Link>
-
+        <Link to={`${linked}`}> {url2}/</Link>
+        <Link to='/typeof'> Social Media Post</Link>
       </div>
-      <div className="md:hidden  " style={{zIndex:111,marginLeft:"85%"}}><Hamburger  toggle={()=>{setopen(!open)}} toggled={open} className="bhm flex md:hidden mt-4" style={{marginLeft:"85%"}}/>
-        {/* <Sidebar /> */}</div>
-        {  open?  <div className="absolute">  <Sidebar/></div>  :null
-}    
-      <div className="absolute w-full " style={{left:"50%",transform:"translate(-50%)"}}>
-      {images.map((image, index) => {
-        return (
-          <div    className=" mt-4"       data-aos="fade-up" key={index}
-          >
-          <img
-            draggable={false}
-            src={image}
-            key={index}
-            alt={index}
-            className='w-4/5  m-auto  py-4 '
-          />
-          </div>
-        );
-      })}
+      <div
+        className='md:hidden  '
+        style={{ zIndex: 111, marginLeft: "85%", marginTop: "-45px" }}>
+        <Hamburger
+          toggle={() => {
+            setopen(!open);
+          }}
+          toggled={open}
+          className='bhm flex md:hidden mt-4'
+          style={{ marginLeft: "85%" }}
+        />
+        {/* <Sidebar /> */}
+      </div>
+      {open ? (
+        <div className='absolute'>
+          {" "}
+          <Sidebar />
+        </div>
+      ) : null}
+      <div
+        className='absolute w-full '
+        style={{ left: "50%", transform: "translate(-50%)" }}>
+        {images.map((image, index) => {
+          return (
+            <div className=' mt-4' data-aos='fade-up' key={index}>
+              <img
+                draggable={false}
+                src={image}
+                key={index}
+                alt={index}
+                className='w-4/5  m-auto  py-4 '
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

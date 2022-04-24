@@ -7,6 +7,8 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+//function for adding
+
 function Home() {
   // document.getElementsByClassName("row1")[0].addEventListener("hover", function() {alert("hi")});
   return (

@@ -79,7 +79,7 @@ height:100vh;
   left: 75%;
 }
 .row1:hover{
-  width: 30vw;
+  /* width: 30vw; */
   /* z-index: 10; */
   left: 0%;
 }
@@ -123,9 +123,7 @@ height:100vh;
    
     /* object-fit: contain; */
   }
-  .Homerows:hover{
-    
-  }
+  
   .row1,.row2,.row3,.row4
   {
     left: 0% !important;

@@ -41,7 +41,7 @@ function Motiongraphic() {
           display: `${!state ? "block" : "none"}`,
           transition: "ease-in-out",
         }}>
-        <Link to='/projects/3' className=" md:block"> /projects</Link>
+        <Link to='/' className=" md:block"> Home </Link>
       </div>
       <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger
