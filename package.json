@@ -1,7 +1,7 @@
 {
   "name": "mathews",
   "version": "0.1.0",
-  "homepage":"https://www.ma2grg.com/"
+  "homepage":"https://www.ma2grg.com/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
