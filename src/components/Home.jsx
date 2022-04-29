@@ -61,7 +61,6 @@ function Home() {
             className='Homerows  ui row3 bg-[#ae3236] '
             src={ui}
             alt='mathews'
-            alt='mathews'
             onHoverStart={() => {
               // alert("hell");
               document.getElementById("ui").style.transform = "translateX(-4%)";
