@@ -23,7 +23,7 @@ import Sidebar from "../components/Sidebar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const images = [
   p1,
