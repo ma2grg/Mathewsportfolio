@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Brandsimg from "../../images/brands.svg";
 import arrow from "../../images/arrow.svg";
 import { Link } from "react-router-dom";
