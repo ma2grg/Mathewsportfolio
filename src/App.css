@@ -117,7 +117,7 @@ height:100vh;
   }
   .Homerows{
     width:100vw;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     user-select: none;
    
@@ -133,11 +133,7 @@ height:100vh;
     /* object-fit: contain; */
     /* height: 100px !important; */
   }
-  .row1:hover,.row2:hover,.row3:hover,.row4:hover
-  {
-    /* left: 0% !important; */
-    /* width: 100vw !important; */
-  }
+  
 }
 
 
