@@ -71,7 +71,7 @@ function About() {
             <span style={{ color: "#CA06C2" }}>Mages Studio Pvt. Ltd.</span>
           </p>
           <p className='mt-12  md:w-4/5 dark:text-[#fafafa]'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            mathew mathew test test Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
             sit delectus neque libero voluptatibus debitis sequi, labore quae
             quibusdam ut tempora similique repellat vitae dolorem consectetur
             aliquam? Fugit exercitationem dolor quasi expedita nam ab minus
@@ -206,19 +206,19 @@ function About() {
       </section>
 
       <footer className=' flex flex-col md:flex-row justify-evenly items-center md:w-2/3 m-auto mt-36'>
-        <a href='https://www.linkedin.com'>
+        <a href='https://www.linkedin.com/in/ma2grg/'>
           <p className='social dark:text-[#fafafa]'>LinkedIn</p>
         </a>{" "}
-        <a href='https://www.linkedin.com'>
+        <a href='https://www.instagram.com/ma2.grg/'>
           <p className='social dark:text-[#fafafa]'>Instagram</p>
         </a>{" "}
-        <a href='https://www.linkedin.com'>
+        <a href='mailto:hello@ma2grg.com'>
           <p className='social dark:text-[#fafafa]'>Email</p>
         </a>{" "}
-        <a href='https://www.linkedin.com'>
+        <a href='https://dribbble.com/ma2grg'>
           <p className='social dark:text-[#fafafa]'>Dribble</p>
         </a>{" "}
-        <a href='https://www.linkedin.com'>
+        <a href='https://www.behance.net/ma2grg'>
           <p className='social dark:text-[#fafafa]'>Behance</p>
         </a>
       </footer>
