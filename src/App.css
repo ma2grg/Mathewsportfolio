@@ -100,8 +100,12 @@ height:100vh;
 }
 @media only screen and (max-width:768px){
   .sidebarr{
-    width:fit-content;
+     width:fit-content; 
+    /* width: 100vw; */
+    /* position: absolute; */
     top: -80px;
+    /* left: 0%;  */
+    /* float: right; */
   }
   .bhm{display:block;z-index:1111;}
   .dd{

@@ -1,11 +1,11 @@
 import React from "react";
 import Mathewspic from "../images/mathsquare.jpg";
-import c1 from "../images/c1.svg";
-import c2 from "../images/c2.svg";
-import c3 from "../images/newlogoc.png";
-import c4 from "../images/c4.svg";
-import c6 from "../images/c6.svg";
-import c5 from "../images/c5.svg";
+import c1 from "../images/clients/c1.svg";
+import c2 from "../images/clients/c2.svg";
+import c3 from "../images/clients/newlogoc.png";
+import c4 from "../images/clients/c4.svg";
+import c6 from "../images/clients/c6.svg";
+import c5 from "../images/clients/c5.svg";
 import tools from "../images/tools2.svg";
 import "../App.css";
 import Sidebar from "./Sidebar";
@@ -51,7 +51,7 @@ function About() {
       ) : null}
     <div 
     className='p-8 md:p-16 w-full dark:bg-[#111111]' style={{fontFamily:"Poppins"}}>
-        <div className="fixed " style={{right:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
+        <div className="relative " style={{right:"10px",top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar /></div>
       
       {/* </div>  <div className="absolute " style={{left:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
@@ -130,11 +130,15 @@ function About() {
           </p>
 
           <div className=' flex flex-col  mt-10 dark:text-[#999999]'>
+          <form action="https://formsubmit.co/adarshgupta2468@gmail.com" method="POST" className='flex flex-col  mt-10 dark:text-[#999999]'>
             <>
+            
               <label for='name'>Name</label>
               <input
                 type='text'
                 id='name'
+                name='name'
+                required
                 className='p-2 dark:bg-[#111111] border-[#000000] dark:border-[#FAFAFA] border-2 border-r-0 border-l-0 border-t-0'
                 style={{
                   outlineWidth: 0,
@@ -153,6 +157,8 @@ function About() {
               <input
                 type='email'
                 id='email'
+                name='email'
+                required
                 className='p-2 dark:bg-[#111111] border-[#000000] dark:border-[#FAFAFA] border-2 border-r-0 border-l-0 border-t-0'
                 style={{
                   outlineWidth: 0,
@@ -189,8 +195,14 @@ function About() {
             <>
               <input
                 type='submit'
-                className='bg-black mt-8 text-white md:w-1/4 p-2 my-4'></input>
+                name="submit"
+
+                className='bg-black mt-8 text-white dark:bg-white dark:text-black dark:hover:animate-pulse md:w-1/4 p-2 my-4'></input>
             </>
+            <input type="hidden" name="_next" value="https://www.ma2grg.com/"/>
+
+
+            </form>
           </div>
         </div>
         <div>
