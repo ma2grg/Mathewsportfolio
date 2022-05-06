@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Hamburger from "hamburger-react";
 
 import Sidebar from "../Sidebar";
+import brand from "./enlargeutils/brand.json";
+import { data } from "autoprefixer";
 
 function TypeOf() {
   const [state, setState] = React.useState(false);
@@ -65,9 +67,18 @@ function TypeOf() {
           <Sidebar />
         </div>
       ) : null}
-      <div className=' ' style={{ flex: 1, backgroundColor: "#00be6e" }}>
+     
+      {brand?.map(data=>{
+
+
+
+return(
+
+
+  <>
+   <div className=' ' style={{ flex: 1, backgroundColor: "#00be6e" }}>
         <img
-          src={typeofi}
+          src={data.image}
           alt=''
           className='w-full mt-10 md:mt-0 md:h-full'
           // style={{ height: "100vh" }}
@@ -77,12 +88,10 @@ function TypeOf() {
         <p
           className=' text-4xl md:text-5xl lg:text-6xl dark:text-white'
           style={{ fontWeight: 800 }}>
-          Type of <br />
-          type
+          {data.name}
         </p>
         <p className='mt-4 text-xl text-gray-600 dark:text-gray-300 font-light'>
-          A type layout expirement
-        </p>
+{data.description}        </p>
         <div className='py-1'>
           <div className='flex items-center justify-between mt-16 '>
             <Link to='/projects/4'>
@@ -104,6 +113,12 @@ function TypeOf() {
           </div>{" "}
         </div>
       </div>
+  </>
+)
+
+
+      })}
+   
     </motion.div>
   );
 }

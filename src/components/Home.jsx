@@ -6,6 +6,7 @@ import ui from "../images/motiongraphic.svg";
 import "../App.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+// import Enlarge from "./Enlarge"
 
 //function for adding
 
@@ -79,6 +80,7 @@ function Home() {
           alt='mathews'
         />
       </Link>
+      {/* <Enlarge/> */}
     </div>
   );
 }
