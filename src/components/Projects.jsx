@@ -117,7 +117,7 @@ function Projects() {
         <Sidebar />
       </div>
       <div
-        className='text-sm md:text-lg p-3  text-[#111111] hidden md:flex'
+        className='text-sm md:text-lg p-3  text-[#111111] hidden md:flex fixed top-0 w-full bg-gray-50 md:bg-transparent'
         style={{
           left: 0,
           zIndex: 100,
@@ -133,7 +133,7 @@ function Projects() {
       </div>
       <div
         className='md:hidden  '
-        style={{ zIndex: 111, marginLeft: "85%", marginTop: "-45px" }}>
+        style={{ zIndex: 111, marginLeft: "85%"}}>
         <Hamburger
           toggle={() => {
             setopen(!open);
