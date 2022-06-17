@@ -67,7 +67,7 @@ function About() {
         </div> */}
          {state ? (
         <div
-          className='absolute h-full w-fit'
+          className='fixed top-0 h-full w-fit'
           style={{
             right: 0,
             top:0,
