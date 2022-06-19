@@ -159,7 +159,7 @@ function About() {
 
             <div className=' flex flex-col  mt-10 dark:text-[#999999]'>
               <form
-                action='https://formsubmit.co/adarshgupta2468@gmail.com'
+                action='https://formsubmit.co/ma2grg@gmail.com'
                 method='POST'
                 className='flex flex-col  mt-10 dark:text-[#999999]'>
                 <>
