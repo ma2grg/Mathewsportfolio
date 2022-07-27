@@ -35,7 +35,7 @@ function TypeOf() {
       className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
       style={{ height: "100vh", fontFamily: "poppins" }}>
          <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
-       <Link to="/" className="  md:block"> Home</Link>
+       <Link to="/" className="  md:block border-2 rounded-3xl px-2 border-white"> Home</Link>
       </div>
       <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger
@@ -93,7 +93,7 @@ function TypeOf() {
                 View Project
               </p>
             </Link>
-            <Link to='/motiongraphics'>
+            <Link to='/brand1'>
               {" "}
               <img
                 src={Arrow}
