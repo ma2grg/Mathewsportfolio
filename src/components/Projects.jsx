@@ -24,31 +24,23 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
 import { Link, useParams } from "react-router-dom";
+// import {  } from "module";
+import { project2, project4 } from "./projects.js";
+// console.log(images);
 
-const images = [
-  p1,
-  p2,
-  p3,
-  p4,
-  p5,
-  p6,
-  p7,
-  p8,
-  p9,
-  p10,
-  p11,
-  p12,
-  p13,
-  p14,
-  p15,
-  p16,
-  p17,
-  p18,
-  p19,
-  p20,
-];
+const findproject = (prm) => {
+  console.log(prm.projects);
+  if (prm.projects == "42") {
+    return project4;
+  }
+  if (prm.projects == "4") return project2;
+  return project2;
+};
+
 function Projects() {
   const params = useParams();
+  const images = findproject(params);
+
   console.log(params);
   let url = params.projects;
   let linked = "/typeof";
@@ -117,23 +109,37 @@ function Projects() {
         <Sidebar />
       </div>
       <div
-        className='text-sm md:text-lg p-3  text-[#111111] hidden md:flex fixed top-0 w-full bg-gray-50 md:bg-transparent'
+        className='text-sm md:text-lg p-4 bg-white  text-[#111111] hidden md:flex fixed top-0 w-full  md:bg-transparent'
         style={{
           left: 0,
           zIndex: 100,
-          fontWeight: 600,
+          fontWeight: 500,
           fontFamily: "poppins",
+          background: "white",
           display: `${!state ? "block" : "none"}`,
           transition: "ease-in-out",
         }}>
-        <Link to='/'> Home/</Link>
+        <Link
+          to='/'
+          className='  md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>
 
-        <Link to={`${linked}`}> {url2}/</Link>
-        <Link to='/typeof'> Social Media Post</Link>
+        <Link
+          to={`${linked}`}
+          className='border-2 border-black px-2 mx-2 rounded-3xl hover:bg-black hover:text-white'>
+          {" "}
+          {url2}
+        </Link>
+        {/* <Link
+          to='/typeof'
+          className='border-2 border-black rounded-3xl px-2 hover:bg-black hover:text-white'>
+          {" "}
+          Social Media Post
+        </Link> */}
       </div>
-      <div
-        className='md:hidden  '
-        style={{ zIndex: 111, marginLeft: "85%"}}>
+      <div className='md:hidden  ' style={{ zIndex: 111, marginLeft: "85%" }}>
         <Hamburger
           toggle={() => {
             setopen(!open);
@@ -151,7 +157,7 @@ function Projects() {
         </div>
       ) : null}
       <div
-        className='absolute w-full '
+        className='absolute w-full mt-8'
         style={{ left: "50%", transform: "translate(-50%)" }}>
         {images.map((image, index) => {
           return (
