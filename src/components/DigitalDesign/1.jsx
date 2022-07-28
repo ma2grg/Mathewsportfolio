@@ -1,5 +1,5 @@
 import React from "react";
-import Brandsimg from "../../images/brands.svg";
+import Brandsimg from "../../images/digitaldesign/cover.jpg";
 import arrow from "../../images/arrow.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -75,9 +75,9 @@ function Brands() {
         <p
           className='text-4xl md:text-5xl dark:text-white'
           style={{ fontWeight: 800 }}>
-         Brand Dummyyyy
+         Social Media
           <br />
-          guideline  2
+          Post  
         </p>
         <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
           A type layout experiment

@@ -30,10 +30,10 @@ import { project2, project4 } from "./projects.js";
 
 const findproject = (prm) => {
   console.log(prm.projects);
-  if (prm.projects == "42") {
+  if (prm.projects === "42") {
     return project4;
   }
-  if (prm.projects == "4") return project2;
+  if (prm.projects === "4") return project2;
   return project2;
 };
 
@@ -43,6 +43,7 @@ function Projects() {
 
   console.log(params);
   let url = params.projects;
+  console.log(url,url,url)
   let linked = "/typeof";
   let url2 = "branding";
   if (url === "1") {
@@ -55,6 +56,10 @@ function Projects() {
     url2 = "Motion Graphics";
     linked = "/motiongraphics";
   } else if (url === "4") {
+    url2 = "Type Of";
+    linked = "/typeof";
+  }
+  else if (url === "42") {
     url2 = "Type Of";
     linked = "/typeof";
   }

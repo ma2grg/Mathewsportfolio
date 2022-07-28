@@ -85,7 +85,7 @@ function TypeOf() {
         </p>
         <div className='py-1'>
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/4'>
+            <Link to='/projects/42'>
               {" "}
               <p
                 className='text-xl dark:text-white'

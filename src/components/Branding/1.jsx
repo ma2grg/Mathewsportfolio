@@ -93,7 +93,7 @@ function Brands() {
           </Link>
 
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/42'>
+            <Link to='/projects/4'>
               {" "}
               <p
                 className='text-xl dark:text-white'

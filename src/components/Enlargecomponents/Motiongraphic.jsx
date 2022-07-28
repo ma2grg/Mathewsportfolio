@@ -92,7 +92,7 @@ function Motiongraphic() {
           Social media post created for Adfolks LLC
         </p>
         <div className='py-2'>
-          <Link to='/typeof' className='w-full'>
+          <Link to='/digitaldesign1' className='w-full'>
             <img
               src={arrow2}
               alt=''
@@ -109,7 +109,7 @@ function Motiongraphic() {
                 View Project
               </p>
             </Link>
-            <Link to='/greetingcards'>
+            <Link to='/digitaldesign1'>
               {" "}
               <img
                 src={arrow}
