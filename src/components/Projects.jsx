@@ -25,7 +25,7 @@ import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
 import { Link, useParams } from "react-router-dom";
 // import {  } from "module";
-import { project2, project4 } from "./projects.js";
+import { project2, project4, projectrave } from "./projects.js";
 // console.log(images);
 
 const findproject = (prm) => {
@@ -34,6 +34,7 @@ const findproject = (prm) => {
     return project4;
   }
   if (prm.projects === "4") return project2;
+  if (prm.projects === "21") return projectrave;
   return project2;
 };
 
@@ -43,7 +44,7 @@ function Projects() {
 
   console.log(params);
   let url = params.projects;
-  console.log(url,url,url)
+  console.log(url, url, url);
   let linked = "/typeof";
   let url2 = "branding";
   if (url === "1") {
@@ -58,10 +59,14 @@ function Projects() {
   } else if (url === "4") {
     url2 = "Type Of";
     linked = "/typeof";
-  }
-  else if (url === "42") {
+  } else if (url === "42") {
     url2 = "Type Of";
     linked = "/typeof";
+    
+  }
+  else if(url==="21") {
+    url2="Branding";
+    linked="/motiongraphics"
   }
 
   const [state, setState] = React.useState(false);

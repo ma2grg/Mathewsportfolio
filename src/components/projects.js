@@ -36,8 +36,28 @@ import b14 from "../components/Branding/project/14.png";
 import b15 from "../components/Branding/project/15.png";
 import b16 from "../components/Branding/project/16.png";
 
+import rave1 from "../components/DigitalDesign/Rave/1.jpg";
+import rave2 from "../components/DigitalDesign/Rave/2.jpg";
+import rave3 from "../components/DigitalDesign/Rave/3.jpg";
+import rave4 from "../components/DigitalDesign/Rave/4.jpg";
+import rave5 from "../components/DigitalDesign/Rave/5.jpg";
+import rave6 from "../components/DigitalDesign/Rave/6.jpg";
+import rave7 from "../components/DigitalDesign/Rave/7.jpg";
+import rave8 from "../components/DigitalDesign/Rave/8.jpg";
+import rave9 from "../components/DigitalDesign/Rave/9.jpg";
+import rave10 from "../components/DigitalDesign/Rave/10.jpg";
+import rave11 from "../components/DigitalDesign/Rave/11.jpg";
+import rave12 from "../components/DigitalDesign/Rave/12.jpg";
+import rave13 from "../components/DigitalDesign/Rave/13.jpg";
+import rave14 from "../components/DigitalDesign/Rave/14.jpg";
+import rave15 from "../components/DigitalDesign/Rave/15.jpg";
 
-
+import rave16 from "../components/DigitalDesign/Rave/16.jpg";
+import rave17 from "../components/DigitalDesign/Rave/17.jpg";
+import rave18 from "../components/DigitalDesign/Rave/18.jpg";
+import rave19 from "../components/DigitalDesign/Rave/19.jpg";
+import rave20 from "../components/DigitalDesign/Rave/20.jpg";
+import rave21 from "../components/DigitalDesign/Rave/21.jpg";
 
 export const project2 = [
   p1,
@@ -62,22 +82,45 @@ export const project2 = [
   p20,
 ];
 
+export const projectrave = [
+  rave1,
+  rave2,
+  rave3,
+  rave4,
+  rave5,
+  rave6,
+  rave7,
+  rave8,
+  rave9,
+  rave10,
+  rave11,
+  rave12,
+  rave13,
+  rave14,
+  rave15,
+  rave16,
+  rave17,
+  rave18,
+  rave19,
+  rave20,
+  rave21,
+];
+
 export const project4 = [
-   b1,
-   b2,
-   b3,
-   b4,
-   b5,
-   b6,
-   b7,
-   b8,
-   b9,
-   b10,
-   b11,
-   b12,
-   b13,
-   b14,
-   b15,
-   b16,
-  
-  ];
+  b1,
+  b2,
+  b3,
+  b4,
+  b5,
+  b6,
+  b7,
+  b8,
+  b9,
+  b10,
+  b11,
+  b12,
+  b13,
+  b14,
+  b15,
+  b16,
+];

@@ -83,7 +83,7 @@ function Brands() {
           A type layout experiment
         </p>
         <div className='py-2'>
-          <Link to='/greetingcards' className='w-full'>
+          <Link to='/motiongraphics' className='w-full'>
             <img
               src={arrow2}
               alt=''
@@ -93,7 +93,7 @@ function Brands() {
           </Link>
 
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/1'>
+            <Link to='/projects/21'>
               {" "}
               <p
                 className='text-xl dark:text-white'
@@ -101,7 +101,7 @@ function Brands() {
                 View Project
               </p>
             </Link>
-            <Link to='/typeof'>
+            <Link to='/motiongraphics'>
               {" "}
               <img
                 src={arrow}
