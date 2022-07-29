@@ -1,5 +1,5 @@
 import React from "react";
-import Brandsimg from "../../images/brands.svg";
+import Brandsimg from "../../images/Greeting/Cover.jpg";
 import arrow from "../../images/arrow.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -93,7 +93,7 @@ function Brands() {
           </Link>
 
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/1'>
+            <Link to='/projects/23'>
               {" "}
               <p
                 className='text-xl dark:text-white'

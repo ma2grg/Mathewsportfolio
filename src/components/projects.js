@@ -58,9 +58,6 @@ import rave19 from "../components/DigitalDesign/Rave/19.jpg";
 import rave20 from "../components/DigitalDesign/Rave/20.jpg";
 import rave21 from "../components/DigitalDesign/Rave/21.jpg";
 
-
-
-
 import mages1 from "../components/DigitalDesign/mages/1.jpg";
 import mages2 from "../components/DigitalDesign/mages/2.jpg";
 import mages3 from "../components/DigitalDesign/mages/3.jpg";
@@ -74,7 +71,6 @@ import mages64 from "../components/DigitalDesign/mages/6_4.gif";
 import mages65 from "../components/DigitalDesign/mages/6_5.gif";
 import mages66 from "../components/DigitalDesign/mages/6_6.gif";
 import mages67 from "../components/DigitalDesign/mages/6_7.gif";
-
 
 import mages7 from "../components/DigitalDesign/mages/7.jpg";
 import mages8 from "../components/DigitalDesign/mages/8.jpg";
@@ -93,8 +89,12 @@ import mages21 from "../components/DigitalDesign/mages/21.jpg";
 import mages22 from "../components/DigitalDesign/mages/22.jpg";
 
 
-
-
+import card1 from "../components/Branding/project3/1.gif"
+import card2 from "../components/Branding/project3/2.gif"
+import card3 from "../components/Branding/project3/3.gif"
+import card4 from "../components/Branding/project3/4.gif"
+import card5 from "../components/Branding/project3/4.gif"
+import card6 from "../components/Branding/project3/4.gif"
 
 
 export const project2 = [
@@ -163,4 +163,35 @@ export const project4 = [
   b16,
 ];
 
-export const mages=[mages1,mages2,mages3,mages4,mages5,mages6,mages61,mages62,mages63,mages64,mages65,mages66,mages67,mages7,mages8,mages9,mages10,mages11,mages12,mages14,mages15,mages16,mages17,mages18,mages19,mages20,mages21,mages22];
+export const mages = [
+  mages1,
+  mages2,
+  mages3,
+  mages4,
+  mages5,
+  mages6,
+  mages61,
+  mages62,
+  mages63,
+  mages64,
+  mages65,
+  mages66,
+  mages67,
+  mages7,
+  mages8,
+  mages9,
+  mages10,
+  mages11,
+  mages12,
+  mages14,
+  mages15,
+  mages16,
+  mages17,
+  mages18,
+  mages19,
+  mages20,
+  mages21,
+  mages22,
+];
+
+export const cards=[card1,card2,card3,card4,card5,card6] 

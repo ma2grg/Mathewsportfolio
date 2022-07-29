@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
 import { Link, useParams } from "react-router-dom";
 // import {  } from "module";
-import { mages, project2, project4, projectrave } from "./projects.js";
+import { cards, mages, project2, project4, projectrave } from "./projects.js";
 // console.log(images);
 
 const findproject = (prm) => {
@@ -17,6 +17,7 @@ const findproject = (prm) => {
   if (prm.projects === "4") return project2;
   if (prm.projects === "21") return projectrave;
   if(prm.projects==="22") return mages
+  if(prm.projects==="23") return cards
   return project2;
 };
 
