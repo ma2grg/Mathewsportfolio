@@ -11,7 +11,7 @@ import Projects from "./components/Projects.jsx";
 import ProjectContainer from"./components/ProjectContainer"
 import Brands from "./components/Enlargecomponents/Brand";
 import Brands1 from "./components/Branding/1.jsx";
-import Brands2 from "./components/Branding/1.jsx";
+import Brands2 from "./components/Branding/2.jsx";
 import Brands3 from "./components/Branding/1.jsx";
 
 import DD1 from "./components/DigitalDesign/1.jsx";

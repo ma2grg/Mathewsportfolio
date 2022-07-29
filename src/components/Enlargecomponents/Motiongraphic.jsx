@@ -1,5 +1,5 @@
 import React from "react";
-import motiongraphics from "../../images/motiongraphicsfull.svg";
+import motiongraphics from "../../images/mages/magescover.jpg";
 import arrow from "../../images/arrow.svg";
 import arrow2 from "../../images/arrowup.svg";
 import { Link } from "react-router-dom";
@@ -84,13 +84,13 @@ function Motiongraphic() {
         <p
           className='text-4xl md:text-5xl lg:text-6xl dark:text-white'
           style={{ fontWeight: 800 }}>
-          Social
+          Mages Studio
+
           <br />
-          media post
+          {/* media post */}
         </p>
         <p className='mt-4 text-xl dark:text-gray-300 text-gray-600  font-light '>
-          Social media post created for Adfolks LLC
-        </p>
+        Branding Design Studio        </p>
         <div className='py-2'>
           <Link to='/digitaldesign1' className='w-full'>
             <img

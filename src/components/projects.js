@@ -124,3 +124,5 @@ export const project4 = [
   b15,
   b16,
 ];
+
+export const mages=[]

@@ -75,13 +75,12 @@ function Brands() {
         <p
           className='text-4xl md:text-5xl dark:text-white'
           style={{ fontWeight: 800 }}>
-        A Type Layout
+       Social Media 
           <br />
-          Experiment  
+          Post  
         </p>
         <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
-          A type layout experiment
-        </p>
+        Social media posts created for Adfolks LLC        </p>
         <div className='py-2'>
           <Link to='/typeof' className='w-full'>
             <img
@@ -101,7 +100,7 @@ function Brands() {
                 View Project
               </p>
             </Link>
-            <Link to='/typeof'>
+            <Link to='/brand2'>
               {" "}
               <img
                 src={arrow}

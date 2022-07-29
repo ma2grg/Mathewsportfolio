@@ -75,15 +75,15 @@ function Brands() {
         <p
           className='text-4xl md:text-5xl dark:text-white'
           style={{ fontWeight: 800 }}>
-          Brand style
+         Greeting Cards
+
           <br />
-          guideline 2
+          {/* guideline 2 */}
         </p>
         <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
-          A type layout experiment
-        </p>
+        Motion poster        </p>
         <div className='py-2'>
-          <Link to='/greetingcards' className='w-full'>
+          <Link to='/brand1' className='w-full'>
             <img
               src={arrow2}
               alt=''

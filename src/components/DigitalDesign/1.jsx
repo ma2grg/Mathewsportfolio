@@ -75,13 +75,11 @@ function Brands() {
         <p
           className='text-4xl md:text-5xl dark:text-white'
           style={{ fontWeight: 800 }}>
-         Social Media
-          <br />
-          Post  
+Rave          <br />
+            
         </p>
         <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
-          A type layout experiment
-        </p>
+        Locust-based energy drink branding.        </p>
         <div className='py-2'>
           <Link to='/motiongraphics' className='w-full'>
             <img
