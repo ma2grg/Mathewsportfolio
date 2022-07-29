@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div
-      className={`p-0 noscrollbar ${!!state ? "dark" : ""}  `}
+      className={`p-0 noscrollbar ${!state ? "dark" : ""}  `}
       style={{ fontfamily: "poppins" }}>
       <Routes>
         <Route path='/' element={<Home />} />

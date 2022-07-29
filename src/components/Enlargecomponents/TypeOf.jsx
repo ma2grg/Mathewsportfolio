@@ -34,8 +34,14 @@ function TypeOf() {
       transition={{ delay: 0.1 }}
       className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
       style={{ height: "100vh", fontFamily: "poppins" }}>
-         <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
-       <Link to="/" className="  md:block border-2 rounded-3xl px-2 border-white"> Home</Link>
+         <div className="fixed m-2 p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
+       {/* <Link to="/" className="  md:block border-2 rounded-3xl px-2 border-white"> Home</Link> */}
+       <Link
+          to='/'
+          className='  md:inline border-2 m-4 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>  
       </div>
       <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger

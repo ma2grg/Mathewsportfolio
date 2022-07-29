@@ -1,5 +1,5 @@
 import React from "react";
-import Mathewspic from "../images/mathsquare.jpg";
+import Mathewspic from "../images/profilepic2.jpg";
 import c1 from "../images/clients/c1.svg";
 import c2 from "../images/clients/c2.svg";
 import c3 from "../images/clients/newlogoc.png";
@@ -10,6 +10,7 @@ import tools from "../images/tools2.svg";
 import "../App.css";
 import Sidebar from "./Sidebar";
 import Hamburger from "hamburger-react";
+import { Link } from "react-router-dom";
 
 function About() {
   // const params = useParams();
@@ -33,6 +34,7 @@ function About() {
 
   return (
     <div className='dark:bg-[#111111]'>
+      
       <div
         className=' md:hidden dark:bg-[#111111] '
         style={{ marginLeft: "85%" }}>
@@ -54,6 +56,12 @@ function About() {
       <div
         className='p-8 md:p-16 w-full dark:bg-[#111111]'
         style={{ fontFamily: "Poppins" }}>
+          <Link
+          to='/'
+          className='  md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>
         {/* <div
           className='relative '
           style={{
@@ -65,24 +73,26 @@ function About() {
           }}>
           <Sidebar />
         </div> */}
-         {state ? (
-        <div
-          className='fixed top-0 h-full w-fit'
-          style={{
-            right: 0,
-            top:0,
-            display: `${state ? "block" : "none"}`,
-            transition: "ease-in-out",
-          }}>
-          <Sidebar />
-        </div>
-      ) : null}
+        {state ? (
+          <div
+            className='fixed top-0 h-full w-fit'
+            style={{
+              right: 0,
+              top: 0,
+              display: `${state ? "block" : "none"}`,
+              transition: "ease-in-out",
+            }}>
+            <Sidebar />
+          </div>
+        ) : null}
+
+
 
         {/* </div>  <div className="absolute " style={{left:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
       </div> */}
         <section className='md:flex md:flex-row-reverse w-11/12 m-auto md:w-full '>
-          <img alt='maths' src={Mathewspic} className=' md:w-1/3' />
+          <img alt='maths' src={Mathewspic} className=' md:w-2/5 object-contain' />
           <div style={{ fontFamily: "poppins" }} className=' mt-10'>
             <p className='text-6xl font-normal dark:text-[#fafafa]'>
               I'm <br />{" "}
@@ -94,14 +104,13 @@ function About() {
             </p>
             <p className='text-2xl   font-light  mt-4 dark:text-[#fafafa] font'>
               Co-founder of{" "}
-              <span style={{ color: "#CA06C2" }}>Mages Studio Pvt. Ltd.</span>
+              <a href='https://www.mages.studio/'>
+                {" "}
+                <span style={{ color: "#CA06C2" }}>Mages Studio Pvt. Ltd.</span>
+              </a>{" "}
             </p>
             <p className='mt-12  md:w-4/5 dark:text-[#fafafa]'>
-              mathew mathew test test Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Tempore, sit delectus neque libero voluptatibus
-              debitis sequi, labore quae quibusdam ut tempora similique repellat
-              vitae dolorem consectetur aliquam? Fugit exercitationem dolor
-              quasi expedita nam ab minus accusantium reprehenderit cum.
+             An engineer turned designer trying to bridge the gap between branding and interface design with 4 years of experience in digital design.
             </p>
           </div>
         </section>
@@ -159,7 +168,7 @@ function About() {
 
             <div className=' flex flex-col  mt-10 dark:text-[#999999]'>
               <form
-                action='https://formsubmit.co/ma2grg@gmail.com'
+                action='https://formsubmit.co/adarshgupta2468@gmail.com'
                 method='POST'
                 className='flex flex-col  mt-10 dark:text-[#999999]'>
                 <>
@@ -226,7 +235,7 @@ function About() {
                   <input
                     type='submit'
                     name='submit'
-                    className='bg-black mt-8 text-white dark:bg-white dark:text-black dark:hover:animate-pulse md:w-1/4 p-2 my-4'></input>
+                    className='bg-black mt-8 cursor-pointer text-white dark:bg-white rounded transition duration-300 ease-in-out hover:bg-gray-50 hover:text-black  dark:text-black dark:hover:bg-black dark:hover:text-white md:w-1/4 p-2 my-4'></input>
                 </>
                 <input
                   type='hidden'

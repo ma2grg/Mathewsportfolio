@@ -41,8 +41,12 @@ function Motiongraphic() {
           display: `${!state ? "block" : "none"}`,
           transition: "ease-in-out",
         }}>
-        <Link to='/' className=" md:block"> Home </Link>
-      </div>
+<Link
+          to='/'
+          className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>        </div>
       <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger
           toggle={() => {

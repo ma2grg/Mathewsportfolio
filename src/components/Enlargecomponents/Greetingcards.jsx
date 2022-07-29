@@ -42,10 +42,12 @@ function GreetingCard() {
             display: `${!state ? "block" : "none"}`,
             transition: "ease-in-out",
           }}>
-          <Link to='/' className=' md:block'>
-            {" "}
-            Home
-          </Link>
+       <Link
+          to='/'
+          className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>  
         </div>
         <div className='md:hidden' style={{ marginLeft: "85%" }}>
           <Hamburger
@@ -94,7 +96,8 @@ function GreetingCard() {
             A companion application for Brunel Students
           </p>
           <div className='py-2'>
-            <Link to='/motiongraphics' className='w-full'>
+          <Link to='/greetingcards'
+ className='w-full'>
               <img
                 src={arrow2}
                 alt=''
@@ -111,7 +114,7 @@ function GreetingCard() {
                   View Project
                 </p>
               </Link>{" "}
-              <Link to='/brands'>
+              <Link to='/greetingcards'>
                 {" "}
                 <img
                   src={arrow}

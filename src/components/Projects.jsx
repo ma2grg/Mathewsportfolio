@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
 import { Link, useParams } from "react-router-dom";
 // import {  } from "module";
-import { cards, mages, project2, project4, projectrave } from "./projects.js";
+import { bruv, cards, mages, project2, project4, projectrave } from "./projects.js";
 // console.log(images);
 
 const findproject = (prm) => {
@@ -18,6 +18,7 @@ const findproject = (prm) => {
   if (prm.projects === "21") return projectrave;
   if(prm.projects==="22") return mages
   if(prm.projects==="23") return cards
+  if(prm.projects==="31") return bruv
   return project2;
 };
 
@@ -30,26 +31,16 @@ function Projects() {
   console.log(url, url, url);
   let linked = "/typeof";
   let url2 = "branding";
-  if (url === "1") {
-    url2 = "branding";
-    linked = "/brands";
-  } else if (url === "2") {
-    url2 = "Greeting Card";
-    linked = "/greetingcards";
-  } else if (url === "3") {
-    url2 = "Motion Graphics";
+  if(url === "23" || url==="4" || url==="42") {
+    url2 = "Digital Design";
+    linked = "/typeof";
+  } else if (url === "22" || url==="21") {
+    url2 = "Branding";
     linked = "/motiongraphics";
-  } else if (url === "4") {
-    url2 = "Type Of";
-    linked = "/typeof";
-  } else if (url === "42") {
-    url2 = "Type Of";
-    linked = "/typeof";
-    
-  }
-  else if(url==="21") {
-    url2="Branding";
-    linked="/motiongraphics"
+  } else {
+    url2=" UI/UX "
+    linked = "/greetingcards";
+
   }
 
   const [state, setState] = React.useState(false);
@@ -114,7 +105,7 @@ function Projects() {
         }}>
         <Link
           to='/'
-          className='  md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          className=' font-500 md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
           {" "}
           Home
         </Link>
@@ -154,12 +145,13 @@ function Projects() {
         style={{ left: "50%", transform: "translate(-50%)" }}>
         {images.map((image, index) => {
           return (
-            <div className=' mt-4' data-aos='fade-up' key={index}>
+            <div className=' mt-4 shado' data-aos='fade-up' key={index}>
               <img
                 draggable={false}
                 src={image}
                 key={index}
                 alt={index}
+                loading="lazy"
                 className='w-4/5  m-auto  py-4 '
               />
             </div>
