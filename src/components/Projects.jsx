@@ -1,31 +1,12 @@
 import React, { useEffect } from "react";
-import p1 from "../images/projects/p1.svg";
-import p2 from "../images/projects/p2.svg";
-import p3 from "../images/projects/p3.svg";
-import p4 from "../images/projects/p4.svg";
-import p5 from "../images/projects/p5.svg";
-import p6 from "../images/projects/p6.svg";
-import p7 from "../images/projects/p7.svg";
-import p8 from "../images/projects/p8.svg";
-import p9 from "../images/projects/p9.svg";
-import p10 from "../images/projects/p10.svg";
-import p11 from "../images/projects/p11.svg";
-import p12 from "../images/projects/p12.svg";
-import p13 from "../images/projects/p13.svg";
-import p14 from "../images/projects/p14.svg";
-import p15 from "../images/projects/p15.svg";
-import p16 from "../images/projects/p16.svg";
-import p17 from "../images/projects/p17.svg";
-import p18 from "../images/projects/p18.svg";
-import p19 from "../images/projects/p19.svg";
-import p20 from "../images/projects/p20.svg";
+
 import Sidebar from "../components/Sidebar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
 import { Link, useParams } from "react-router-dom";
 // import {  } from "module";
-import { project2, project4, projectrave } from "./projects.js";
+import { mages, project2, project4, projectrave } from "./projects.js";
 // console.log(images);
 
 const findproject = (prm) => {
@@ -35,6 +16,7 @@ const findproject = (prm) => {
   }
   if (prm.projects === "4") return project2;
   if (prm.projects === "21") return projectrave;
+  if(prm.projects==="22") return mages
   return project2;
 };
 

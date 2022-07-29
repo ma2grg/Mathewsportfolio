@@ -51,13 +51,51 @@ import rave12 from "../components/DigitalDesign/Rave/12.jpg";
 import rave13 from "../components/DigitalDesign/Rave/13.jpg";
 import rave14 from "../components/DigitalDesign/Rave/14.jpg";
 import rave15 from "../components/DigitalDesign/Rave/15.jpg";
-
 import rave16 from "../components/DigitalDesign/Rave/16.jpg";
 import rave17 from "../components/DigitalDesign/Rave/17.jpg";
 import rave18 from "../components/DigitalDesign/Rave/18.jpg";
 import rave19 from "../components/DigitalDesign/Rave/19.jpg";
 import rave20 from "../components/DigitalDesign/Rave/20.jpg";
 import rave21 from "../components/DigitalDesign/Rave/21.jpg";
+
+
+
+
+import mages1 from "../components/DigitalDesign/mages/1.jpg";
+import mages2 from "../components/DigitalDesign/mages/2.jpg";
+import mages3 from "../components/DigitalDesign/mages/3.jpg";
+import mages4 from "../components/DigitalDesign/mages/4.jpg";
+import mages5 from "../components/DigitalDesign/mages/5.jpg";
+import mages6 from "../components/DigitalDesign/mages/6.jpg";
+import mages61 from "../components/DigitalDesign/mages/6_1.gif";
+import mages62 from "../components/DigitalDesign/mages/6_2.gif";
+import mages63 from "../components/DigitalDesign/mages/6_3.gif";
+import mages64 from "../components/DigitalDesign/mages/6_4.gif";
+import mages65 from "../components/DigitalDesign/mages/6_5.gif";
+import mages66 from "../components/DigitalDesign/mages/6_6.gif";
+import mages67 from "../components/DigitalDesign/mages/6_7.gif";
+
+
+import mages7 from "../components/DigitalDesign/mages/7.jpg";
+import mages8 from "../components/DigitalDesign/mages/8.jpg";
+import mages9 from "../components/DigitalDesign/mages/9.jpg";
+import mages10 from "../components/DigitalDesign/mages/10.jpg";
+import mages11 from "../components/DigitalDesign/mages/11.jpg";
+import mages12 from "../components/DigitalDesign/mages/12.jpg";
+import mages14 from "../components/DigitalDesign/mages/14.jpg";
+import mages15 from "../components/DigitalDesign/mages/15.jpg";
+import mages16 from "../components/DigitalDesign/mages/16.jpg";
+import mages17 from "../components/DigitalDesign/mages/17.jpg";
+import mages18 from "../components/DigitalDesign/mages/18.jpg";
+import mages19 from "../components/DigitalDesign/mages/19.jpg";
+import mages20 from "../components/DigitalDesign/mages/20.jpg";
+import mages21 from "../components/DigitalDesign/mages/21.jpg";
+import mages22 from "../components/DigitalDesign/mages/22.jpg";
+
+
+
+
+
 
 export const project2 = [
   p1,
@@ -125,4 +163,4 @@ export const project4 = [
   b16,
 ];
 
-export const mages=[]
+export const mages=[mages1,mages2,mages3,mages4,mages5,mages6,mages61,mages62,mages63,mages64,mages65,mages66,mages67,mages7,mages8,mages9,mages10,mages11,mages12,mages14,mages15,mages16,mages17,mages18,mages19,mages20,mages21,mages22];

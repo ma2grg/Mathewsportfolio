@@ -101,7 +101,7 @@ function Motiongraphic() {
             />
           </Link>
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/3'>
+            <Link to='/projects/22'>
               {" "}
               <p
                 className='text-xl dark:text-white'
