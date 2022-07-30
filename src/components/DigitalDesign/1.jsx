@@ -34,12 +34,13 @@ function Brands() {
       <div
         className='fixed p-2 dark:text-[#FAFAFA]  md:flex'
         style={{ left: 0, zIndex: 100, transition: "ease-in-out" }}>
-<Link
+        <Link
           to='/'
           className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
           {" "}
           Home
-        </Link>        </div>
+        </Link>{" "}
+      </div>
       <div className='md:hidden ' style={{ marginLeft: "85%" }}>
         <Hamburger
           direction='left'
@@ -51,7 +52,7 @@ function Brands() {
         />
       </div>
       {open ? (
-        <div className='absolute'>
+        <div className='absolute right-0'>
           {" "}
           <Sidebar mobile={true} />
         </div>
@@ -79,11 +80,11 @@ function Brands() {
         <p
           className='text-4xl md:text-5xl dark:text-white'
           style={{ fontWeight: 800 }}>
-Rave          <br />
-            
+          Rave <br />
         </p>
         <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
-        Locust-based energy drink branding.        </p>
+          Locust-based energy drink branding.{" "}
+        </p>
         <div className='py-2'>
           <Link to='/motiongraphics' className='w-full'>
             <img

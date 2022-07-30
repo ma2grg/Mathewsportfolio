@@ -14,10 +14,11 @@ function Sidebar({ mobile }) {
     <motion.div
       animate={{ x: [0, 40, 0] }}
       transition={{ delay: 0.2 }}
-      className='sidebarr z-10 bg-white drop-shadow-2xl shadow-3xl relative h-full  flex flex-col justify-center items-center'
+      className='sidebarr  p-2 z-10 bg-white drop-shadow-2xl shadow-3xl relative h-full  flex flex-col justify-center items-center'
       style={{
         zIndex: 100,
         fontFamily: "poppins",
+        height: "100vh",
         transition: "200ms ease-in-out",
       }}>
       <div
@@ -59,7 +60,7 @@ function Sidebar({ mobile }) {
           </p>
         </Link>
       </div>
-      <div className="w-full">
+      <div className='w-full'>
         <div className='flex items-center justify-evenly'>
           {/* <img
             src={insta}

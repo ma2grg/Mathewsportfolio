@@ -55,7 +55,7 @@ function TypeOf() {
         {/* <Sidebar /> */}
       </div>
       {open ? (
-        <div className='absolute'>
+        <div className='absolute right-0 '>
           {" "}
           <Sidebar />
         </div>
@@ -87,7 +87,7 @@ function TypeOf() {
           type
         </p>
         <p className='mt-4 text-xl text-gray-600 dark:text-gray-300 font-light'>
-          A type layout expirement
+          A type layout Experiment
         </p>
         <div className='py-1'>
           <div className='flex items-center justify-between mt-16 '>

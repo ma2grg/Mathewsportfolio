@@ -34,10 +34,16 @@ function About() {
 
   return (
     <div className='dark:bg-[#111111]'>
-      
+       
       <div
-        className=' md:hidden dark:bg-[#111111] '
-        style={{ marginLeft: "85%" }}>
+        className=' md:hidden dark:bg-[#111111] flex flex-row items-center justify-between'
+        style={{ marginLeft: "0%" }}>
+           <Link
+          to='/'
+          className='m-4 my-2 md:inline border-2 rounded-3xl px-2 border-black dark:hover:bg-white transition duration-300 dark:hover:text-black dark:text-white dark:border-white hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>
         <Hamburger
           toggle={() => {
             setopen(!open);
@@ -48,17 +54,18 @@ function About() {
         />
       </div>
       {open ? (
-        <div className='absolute'>
+        <div className='absolute right-0'>
           {" "}
+          
           <Sidebar />
         </div>
       ) : null}
       <div
-        className='p-8 md:p-16 w-full dark:bg-[#111111]'
+        className='p-8 md:p-16  w-full dark:bg-[#111111]'
         style={{ fontFamily: "Poppins" }}>
-          <Link
+        <Link
           to='/'
-          className='  md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          className='hidden my-2 md:inline border-2 rounded-3xl px-2 border-black dark:hover:bg-white transition duration-300 dark:hover:text-black dark:text-white dark:border-white hover:bg-black hover:text-white'>
           {" "}
           Home
         </Link>
@@ -86,13 +93,15 @@ function About() {
           </div>
         ) : null}
 
-
-
         {/* </div>  <div className="absolute " style={{left:0,top:0,zIndex:100,display:`${state?"block":"none"}`,transition:"ease-in-out"}}>
         <Sidebar />
       </div> */}
         <section className='md:flex md:flex-row-reverse w-11/12 m-auto md:w-full '>
-          <img alt='maths' src={Mathewspic} className=' md:w-2/5 object-contain' />
+          <img
+            alt='maths'
+            src={Mathewspic}
+            className=' md:w-2/5 object-contain'
+          />
           <div style={{ fontFamily: "poppins" }} className=' mt-10'>
             <p className='text-6xl font-normal dark:text-[#fafafa]'>
               I'm <br />{" "}
@@ -109,8 +118,11 @@ function About() {
                 <span style={{ color: "#CA06C2" }}>Mages Studio Pvt. Ltd.</span>
               </a>{" "}
             </p>
-            <p className='mt-12  md:w-4/5 dark:text-[#fafafa]'>
-             An engineer turned designer trying to bridge the gap between branding and interface design with 4 years of experience in digital design.
+            <p className='mt-12  md:w-4/6 dark:text-[#fafafa]'>
+              An engineer turned designer trying to bridge the gap between
+           
+              branding and interface design with 4 years of experience in
+              digital design.
             </p>
           </div>
         </section>
@@ -218,7 +230,7 @@ function About() {
                     id='Message'
                     rows='3'
                     cols='15'
-                    className='p-2  dark:bg-[#111111] border-[#000000] dark:border-[#FAFAFA] border-2 border-r-0 border-l-0 border-t-0'
+                    className='p-2   dark:bg-[#111111] border-[#000000] dark:border-[#FAFAFA] border-2 border-r-0 border-l-0 border-t-0'
                     style={{
                       outlineWidth: 0,
                       columns: "20",
@@ -235,7 +247,7 @@ function About() {
                   <input
                     type='submit'
                     name='submit'
-                    className='bg-black mt-8 cursor-pointer text-white dark:bg-white rounded transition duration-300 ease-in-out hover:bg-gray-50 hover:text-black  dark:text-black dark:hover:bg-black dark:hover:text-white md:w-1/4 p-2 my-4'></input>
+                    className='bgwhite mt-8 cursor-pointer text-black border-2 rounded-full  border-black dark:bg-wite  transition duration-300 ease-in-out hover:bg-black hover:text-white  dark:text-white dark:hover:bg-black dark:hover:text-white md:w-1/4 p-2 my-4'></input>
                 </>
                 <input
                   type='hidden'
