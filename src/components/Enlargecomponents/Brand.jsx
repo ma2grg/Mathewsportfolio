@@ -33,11 +33,15 @@ function Brands() {
       style={{ height: "100vh", fontFamily: "poppins" }}>
       <div
         // className='fixed p-2 dark:text-[#FAFAFA]  md:flex'
-        className='  md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'
+        className='p-2  md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'
 
         style={{ left: 0, zIndex: 100, transition: "ease-in-out" }}>
-        <Link to='/'> Home </Link>
-      </div>
+ <Link
+          to='/'
+          className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>{" "}      </div>
       <div className='md:hidden ' style={{ marginLeft: "85%" }}>
         <Hamburger
           direction='left'
@@ -49,8 +53,8 @@ function Brands() {
         />
       </div>
       {open ? (
-        <div className='absolute'>
-          {" "}
+        <div className='absolute right-0'>
+        {" "}
           <Sidebar mobile={true} />
         </div>
       ) : null}{" "}

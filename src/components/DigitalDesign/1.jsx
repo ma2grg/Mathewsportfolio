@@ -1,5 +1,5 @@
 import React from "react";
-import Brandsimg from "../../images/brands.svg";
+import Brandsimg from "../../images/digitaldesign/cover.jpg";
 import arrow from "../../images/arrow.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -34,7 +34,12 @@ function Brands() {
       <div
         className='fixed p-2 dark:text-[#FAFAFA]  md:flex'
         style={{ left: 0, zIndex: 100, transition: "ease-in-out" }}>
-        <Link to='/'> Home </Link>
+        <Link
+          to='/'
+          className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>{" "}
       </div>
       <div className='md:hidden ' style={{ marginLeft: "85%" }}>
         <Hamburger
@@ -47,7 +52,7 @@ function Brands() {
         />
       </div>
       {open ? (
-        <div className='absolute'>
+        <div className='absolute right-0'>
           {" "}
           <Sidebar mobile={true} />
         </div>
@@ -75,15 +80,13 @@ function Brands() {
         <p
           className='text-4xl md:text-5xl dark:text-white'
           style={{ fontWeight: 800 }}>
-         Brand Dummyyyy
-          <br />
-          guideline  2
+          Rave <br />
         </p>
         <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
-          A type layout experiment
+          Locust-based energy drink branding.{" "}
         </p>
         <div className='py-2'>
-          <Link to='/greetingcards' className='w-full'>
+          <Link to='/motiongraphics' className='w-full'>
             <img
               src={arrow2}
               alt=''
@@ -93,7 +96,7 @@ function Brands() {
           </Link>
 
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/1'>
+            <Link to='/projects/21'>
               {" "}
               <p
                 className='text-xl dark:text-white'
@@ -101,7 +104,7 @@ function Brands() {
                 View Project
               </p>
             </Link>
-            <Link to='/typeof'>
+            <Link to='/motiongraphics'>
               {" "}
               <img
                 src={arrow}

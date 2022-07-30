@@ -1,5 +1,5 @@
 import React from "react";
-import greetings from "../../images/Greetingcard.svg";
+import greetings from "../../images/UI/Cover.jpg";
 import arrow from "../../images/arrow.svg";
 import { Link } from "react-router-dom";
 import arrow2 from "../../images/arrowup.svg";
@@ -34,23 +34,35 @@ function GreetingCard() {
         transition={{ delay: 0.1 }}
         className=' md:flex md:flex-row-reverse w-full h-full dark:bg-[#111111]'
         style={{ height: "100vh", fontFamily: "poppins" }}>
-           <div className="fixed p-2 dark:text-[#FAFAFA]" style={{left:0,zIndex:100,display:`${!state?"block":"none"}`,transition:"ease-in-out"}}>
-       <Link to="/" className=" md:block"> Home</Link>
-      </div>
-        <div className='md:hidden' style={{marginLeft:"85%"}}>
+        <div
+          className='fixed p-2 dark:text-[#FAFAFA]'
+          style={{
+            left: 0,
+            zIndex: 100,
+            display: `${!state ? "block" : "none"}`,
+            transition: "ease-in-out",
+          }}>
+       <Link
+          to='/'
+          className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>  
+        </div>
+        <div className='md:hidden' style={{ marginLeft: "85%" }}>
           <Hamburger
             toggle={() => {
               setopen(!open);
             }}
             toggled={open}
             className='bhm flex md:hidden'
-            color="#a79b9b"
+            color='#a79b9b'
           />
           {/* <Sidebar /> */}
         </div>
         {open ? (
-          <div className='absolute'>
-            {" "}
+        <div className='absolute right-0'>
+        {" "}
             <Sidebar />
           </div>
         ) : null}
@@ -74,33 +86,44 @@ function GreetingCard() {
           />
         </div>
         <div className='md:w-1/3 mt-12 md:mt-32 flex flex-col px-6 justify-center md:pb-16 md:justify-end'>
-          <p className='text-4xl md:text-5xl lg:text-6xl dark:text-white' style={{ fontWeight: 800 }}>
-            Greeting
+          <p
+            className='text-4xl md:text-5xl lg:text-6xl dark:text-white'
+            style={{ fontWeight: 800 }}>
+            Bruv
             <br />
-            cards
           </p>
-          <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>A type layout experiment</p>
+          <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
+            A companion application for Brunel Students
+          </p>
           <div className='py-2'>
-
-          <Link to='/motiongraphics' className='w-full'>
-            <img
-              src={arrow2}
-              alt=''
-              className='w-8   h-8 dark:bg-white rounded-full'
-              style={{ float: "right" }}
-            />
-          </Link>
-
-          <div className='flex items-center justify-between mt-16 '>
-          <Link to="/projects/2">
-            <p className="text-xl dark:text-white" style={{ textDecoration: "underline" }}>View Project</p>
-          
-          </Link>  <Link to='/brands'>
-              {" "}
-              <img src={arrow} alt='arrow' className='dark:bg-white w-8 h-8  rounded-full' />
+          <Link to='/greetingcards'
+ className='w-full'>
+              <img
+                src={arrow2}
+                alt=''
+                className='w-8   h-8 dark:bg-white rounded-full'
+                style={{ float: "right" }}
+              />
             </Link>
+
+            <div className='flex items-center justify-between mt-16 '>
+              <Link to='/projects/31'>
+                <p
+                  className='text-xl dark:text-white'
+                  style={{ textDecoration: "underline" }}>
+                  View Project
+                </p>
+              </Link>{" "}
+              <Link to='/greetingcards'>
+                {" "}
+                <img
+                  src={arrow}
+                  alt='arrow'
+                  className='dark:bg-white w-8 h-8  rounded-full'
+                />
+              </Link>
+            </div>
           </div>
-        </div>
         </div>
       </motion.div>
     </div>

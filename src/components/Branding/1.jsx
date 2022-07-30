@@ -34,8 +34,12 @@ function Brands() {
       <div
         className='fixed p-2 dark:text-[#FAFAFA]  md:flex'
         style={{ left: 0, zIndex: 100, transition: "ease-in-out" }}>
-        <Link to='/'> Home </Link>
-      </div>
+<Link
+          to='/'
+          className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>      </div>
       <div className='md:hidden ' style={{ marginLeft: "85%" }}>
         <Hamburger
           direction='left'
@@ -47,8 +51,8 @@ function Brands() {
         />
       </div>
       {open ? (
-        <div className='absolute'>
-          {" "}
+        <div className='absolute right-0'>
+        {" "}
           <Sidebar mobile={true} />
         </div>
       ) : null}{" "}
@@ -75,13 +79,12 @@ function Brands() {
         <p
           className='text-4xl md:text-5xl dark:text-white'
           style={{ fontWeight: 800 }}>
-        A Type Layout
+       Social Media 
           <br />
-          Experiment  
+          Post  
         </p>
         <p className='mt-2 text-xl dark:text-gray-300 text-gray-600  font-light'>
-          A type layout experiment
-        </p>
+        Social media posts created for Adfolks LLC        </p>
         <div className='py-2'>
           <Link to='/typeof' className='w-full'>
             <img
@@ -93,7 +96,7 @@ function Brands() {
           </Link>
 
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/42'>
+            <Link to='/projects/4'>
               {" "}
               <p
                 className='text-xl dark:text-white'
@@ -101,7 +104,7 @@ function Brands() {
                 View Project
               </p>
             </Link>
-            <Link to='/typeof'>
+            <Link to='/brand2'>
               {" "}
               <img
                 src={arrow}

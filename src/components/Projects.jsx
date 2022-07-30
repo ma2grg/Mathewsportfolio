@@ -1,70 +1,46 @@
 import React, { useEffect } from "react";
-import p1 from "../images/projects/p1.svg";
-import p2 from "../images/projects/p2.svg";
-import p3 from "../images/projects/p3.svg";
-import p4 from "../images/projects/p4.svg";
-import p5 from "../images/projects/p5.svg";
-import p6 from "../images/projects/p6.svg";
-import p7 from "../images/projects/p7.svg";
-import p8 from "../images/projects/p8.svg";
-import p9 from "../images/projects/p9.svg";
-import p10 from "../images/projects/p10.svg";
-import p11 from "../images/projects/p11.svg";
-import p12 from "../images/projects/p12.svg";
-import p13 from "../images/projects/p13.svg";
-import p14 from "../images/projects/p14.svg";
-import p15 from "../images/projects/p15.svg";
-import p16 from "../images/projects/p16.svg";
-import p17 from "../images/projects/p17.svg";
-import p18 from "../images/projects/p18.svg";
-import p19 from "../images/projects/p19.svg";
-import p20 from "../images/projects/p20.svg";
+
 import Sidebar from "../components/Sidebar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
 import { Link, useParams } from "react-router-dom";
+// import {  } from "module";
+import { bruv, cards, mages, project2, project4, projectrave } from "./projects.js";
+// console.log(images);
 
-const images = [
-  p1,
-  p2,
-  p3,
-  p4,
-  p5,
-  p6,
-  p7,
-  p8,
-  p9,
-  p10,
-  p11,
-  p12,
-  p13,
-  p14,
-  p15,
-  p16,
-  p17,
-  p18,
-  p19,
-  p20,
-];
+const findproject = (prm) => {
+  console.log(prm.projects);
+  if (prm.projects === "42") {
+    return project4;
+  }
+  if (prm.projects === "4") return project2;
+  if (prm.projects === "21") return projectrave;
+  if(prm.projects==="22") return mages
+  if(prm.projects==="23") return cards
+  if(prm.projects==="31") return bruv
+  return project2;
+};
+
 function Projects() {
   const params = useParams();
+  const images = findproject(params);
+
   console.log(params);
   let url = params.projects;
+  console.log(url, url, url);
   let linked = "/typeof";
   let url2 = "branding";
-  if (url === "1") {
-    url2 = "branding";
-    linked = "/brands";
-  } else if (url === "2") {
-    url2 = "Greeting Card";
-    linked = "/greetingcards";
-  } else if (url === "3") {
-    url2 = "Motion Graphics";
-    linked = "/motiongraphics";
-  } else if (url === "4") {
-    url2 = "Type Of";
+  if(url === "23" || url==="4" || url==="42") {
+    url2 = "Digital Design";
     linked = "/typeof";
+  } else if (url === "22" || url==="21") {
+    url2 = "Branding";
+    linked = "/motiongraphics";
+  } else {
+    url2=" UI/UX "
+    linked = "/greetingcards";
+
   }
 
   const [state, setState] = React.useState(false);
@@ -117,23 +93,37 @@ function Projects() {
         <Sidebar />
       </div>
       <div
-        className='text-sm md:text-lg p-3  text-[#111111] hidden md:flex fixed top-0 w-full bg-gray-50 md:bg-transparent'
+        className='text-sm md:text-lg p-4 bg-white  text-[#111111] hidden md:flex fixed top-0 w-full  md:bg-transparent'
         style={{
           left: 0,
           zIndex: 100,
-          fontWeight: 600,
+          fontWeight: 500,
           fontFamily: "poppins",
+          background: "white",
           display: `${!state ? "block" : "none"}`,
           transition: "ease-in-out",
         }}>
-        <Link to='/'> Home/</Link>
+        <Link
+          to='/'
+          className=' font-500 md:inline border-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>
 
-        <Link to={`${linked}`}> {url2}/</Link>
-        <Link to='/typeof'> Social Media Post</Link>
+        <Link
+          to={`${linked}`}
+          className='border-2 border-black px-2 mx-2 rounded-3xl hover:bg-black hover:text-white'>
+          {" "}
+          {url2}
+        </Link>
+        {/* <Link
+          to='/typeof'
+          className='border-2 border-black rounded-3xl px-2 hover:bg-black hover:text-white'>
+          {" "}
+          Social Media Post
+        </Link> */}
       </div>
-      <div
-        className='md:hidden  '
-        style={{ zIndex: 111, marginLeft: "85%"}}>
+      <div className='md:hidden  ' style={{ zIndex: 111, marginLeft: "85%" }}>
         <Hamburger
           toggle={() => {
             setopen(!open);
@@ -151,16 +141,17 @@ function Projects() {
         </div>
       ) : null}
       <div
-        className='absolute w-full '
+        className='absolute w-full mt-8'
         style={{ left: "50%", transform: "translate(-50%)" }}>
         {images.map((image, index) => {
           return (
-            <div className=' mt-4' data-aos='fade-up' key={index}>
+            <div className=' mt-4 shado' data-aos='fade-up' key={index}>
               <img
                 draggable={false}
                 src={image}
                 key={index}
                 alt={index}
+                loading="lazy"
                 className='w-4/5  m-auto  py-4 '
               />
             </div>

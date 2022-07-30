@@ -11,10 +11,10 @@ import Projects from "./components/Projects.jsx";
 import ProjectContainer from"./components/ProjectContainer"
 import Brands from "./components/Enlargecomponents/Brand";
 import Brands1 from "./components/Branding/1.jsx";
-import Brands2 from "./components/Branding/1.jsx";
+import Brands2 from "./components/Branding/2.jsx";
 import Brands3 from "./components/Branding/1.jsx";
 
-import Brands1j from "./components/Branding/1.jsx";
+import DD1 from "./components/DigitalDesign/1.jsx";
 import Bjrands2 from "./components/Branding/1.jsx";
 import Brjands3 from "./components/Branding/1.jsx";
 import { useEffect, useState } from "react";
@@ -42,6 +42,12 @@ function App() {
         <Route path='/brand1' element={<Brands1 />} />
         <Route path='/brand2' element={<Brands2 />} />
         <Route path='/brand3' element={<Brands3 />} />
+
+        <Route path='/digitaldesign1' element={<DD1 />} />
+
+
+
+
         <Route path="/projectsbucket/:id" element={<ProjectContainer />} />
 
         <Route path='/motiongraphics' element={<Motiongraphic />} />

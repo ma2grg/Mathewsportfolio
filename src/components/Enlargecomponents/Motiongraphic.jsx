@@ -1,5 +1,5 @@
 import React from "react";
-import motiongraphics from "../../images/motiongraphicsfull.svg";
+import motiongraphics from "../../images/mages/magescover.jpg";
 import arrow from "../../images/arrow.svg";
 import arrow2 from "../../images/arrowup.svg";
 import { Link } from "react-router-dom";
@@ -41,8 +41,12 @@ function Motiongraphic() {
           display: `${!state ? "block" : "none"}`,
           transition: "ease-in-out",
         }}>
-        <Link to='/' className=" md:block"> Home </Link>
-      </div>
+<Link
+          to='/'
+          className='  md:inline border-2 m-2 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          {" "}
+          Home
+        </Link>        </div>
       <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger
           toggle={() => {
@@ -55,7 +59,7 @@ function Motiongraphic() {
         {/* <Sidebar /> */}
       </div>
       {open ? (
-        <div className='absolute'>
+        <div className='absolute right-0'>
           {" "}
           <Sidebar />
         </div>
@@ -84,15 +88,15 @@ function Motiongraphic() {
         <p
           className='text-4xl md:text-5xl lg:text-6xl dark:text-white'
           style={{ fontWeight: 800 }}>
-          Social
+          Mages Studio
+
           <br />
-          media post
+          {/* media post */}
         </p>
         <p className='mt-4 text-xl dark:text-gray-300 text-gray-600  font-light '>
-          Social media post created for Adfolks LLC
-        </p>
+        Branding Design Studio        </p>
         <div className='py-2'>
-          <Link to='/typeof' className='w-full'>
+          <Link to='/digitaldesign1' className='w-full'>
             <img
               src={arrow2}
               alt=''
@@ -101,7 +105,7 @@ function Motiongraphic() {
             />
           </Link>
           <div className='flex items-center justify-between mt-16 '>
-            <Link to='/projects/3'>
+            <Link to='/projects/22'>
               {" "}
               <p
                 className='text-xl dark:text-white'
@@ -109,7 +113,7 @@ function Motiongraphic() {
                 View Project
               </p>
             </Link>
-            <Link to='/greetingcards'>
+            <Link to='/digitaldesign1'>
               {" "}
               <img
                 src={arrow}

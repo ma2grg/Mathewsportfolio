@@ -1,8 +1,8 @@
 import React from "react";
 import mathews from "../images/mathews.svg";
 import Digitaldesign from "../images/Digitaldesign.svg";
-import more from "../images/more.svg";
-import ui from "../images/motiongraphic.svg";
+import more from "../images/Branding.svg";
+import ui from "../images/MobUI.png";
 import "../App.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
