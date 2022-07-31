@@ -151,7 +151,7 @@ function Projects() {
                 src={image}
                 key={index}
                 alt={index}
-                loading="lazy"
+                // loading="lazy"
                 className='w-4/5  m-auto  py-4 '
               />
             </div>
