@@ -135,7 +135,7 @@ function Projects() {
         {/* <Sidebar /> */}
       </div>
       {open ? (
-        <div className='absolute'>
+        <div className='absolute right-0'>
           {" "}
           <Sidebar />
         </div>
