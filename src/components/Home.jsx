@@ -1,7 +1,7 @@
 import React from "react";
 import mathews from "../images/mathews.svg";
 import Digitaldesign from "../images/Digitaldesign.svg";
-import more from "../images/Branding.svg";
+import more from "../images/more.svg";
 import ui from "../images/MobUI.png";
 import "../App.css";
 import { Link } from "react-router-dom";
@@ -59,7 +59,7 @@ function Home() {
         <div className=''>
           <motion.img
             id='ui'
-            className='Homerows  ui row3 bg-[#ae3236] '
+            className='Homerows brightness-125 ui row3 bg-[#ae3236] '
             src={ui}
             alt='mathews'
             onHoverStart={() => {
