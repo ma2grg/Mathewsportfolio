@@ -180,7 +180,7 @@ function About() {
 
             <div className=' flex flex-col  mt-10 dark:text-[#999999]'>
               <form
-                action='https://formsubmit.co/adarshgupta2468@gmail.com'
+                action='https://formsubmit.co/ma2grg@gmail.com'
                 method='POST'
                 className='flex flex-col  mt-10 dark:text-[#999999]'>
                 <>
@@ -247,7 +247,7 @@ function About() {
                   <input
                     type='submit'
                     name='submit'
-                    className='bgwhite mt-8 cursor-pointer text-black border-2 rounded-full  border-black dark:bg-wite  transition duration-300 ease-in-out hover:bg-black hover:text-white  dark:text-white dark:hover:bg-black dark:hover:text-white md:w-1/4 p-2 my-4'></input>
+                    className='bgwhite mt-8 cursor-pointer text-black border-2 rounded-full  border-black dark:border-white dark:bg-wite  transition duration-300 ease-in-out hover:bg-black dark:hover:text-black dark:hover:bg-white hover:text-white  dark:text-white dark:hover:bgblack dark:hover:text-wite md:w-1/4 p-2 my-4'></input>
                 </>
                 <input
                   type='hidden'

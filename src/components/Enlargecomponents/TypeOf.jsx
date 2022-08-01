@@ -38,10 +38,12 @@ function TypeOf() {
        {/* <Link to="/" className="  md:block border-2 rounded-3xl px-2 border-white"> Home</Link> */}
        <Link
           to='/'
-          className='  md:inline border-2 m-4 rounded-3xl px-2 border-black hover:bg-black hover:text-white'>
+          className='  md:inline text-xl border-2 m-4 rounded-3xl transition ease-in-out duration-200 px-2 border-black dark:border-white dark:hover:text-black dark:hover:bg-white hover:bg-black hover:text-white'>
           {" "}
           Home
         </Link>  
+
+       
       </div>
       <div className='md:hidden' style={{marginLeft:"85%"}}>
         <Hamburger

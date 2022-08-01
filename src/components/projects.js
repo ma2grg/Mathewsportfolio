@@ -88,57 +88,70 @@ import mages20 from "../components/DigitalDesign/mages/20.jpg";
 import mages21 from "../components/DigitalDesign/mages/21.jpg";
 import mages22 from "../components/DigitalDesign/mages/22.jpg";
 
+import card1 from "../components/Branding/project3/1.gif";
+import card2 from "../components/Branding/project3/2.gif";
+import card3 from "../components/Branding/project3/3.gif";
+import card4 from "../components/Branding/project3/4.gif";
+import card5 from "../components/Branding/project3/5.gif";
+import card6 from "../components/Branding/project3/6.gif";
 
-import card1 from "../components/Branding/project3/1.gif"
-import card2 from "../components/Branding/project3/2.gif"
-import card3 from "../components/Branding/project3/3.gif"
-import card4 from "../components/Branding/project3/4.gif"
-import card5 from "../components/Branding/project3/5.gif"
-import card6 from "../components/Branding/project3/6.gif"
+import bru1 from "../components/UIUX/Projects/1.jpg";
+import bru2 from "../components/UIUX/Projects/2.jpg";
+import bru3 from "../components/UIUX/Projects/26.jpg";
+import bru4 from "../components/UIUX/Projects/27.jpg";
+import bru5 from "../components/UIUX/Projects/3.jpg";
+import bru6 from "../components/UIUX/Projects/4.jpg";
+import bru7 from "../components/UIUX/Projects/5.jpg";
+import bru8 from "../components/UIUX/Projects/6.jpg";
+import bru9 from "../components/UIUX/Projects/7.jpg";
+import bru10 from "../components/UIUX/Projects/8.jpg";
+import bru11 from "../components/UIUX/Projects/9.jpg";
+import bru12 from "../components/UIUX/Projects/11.jpg";
+import bru13 from "../components/UIUX/Projects/10.jpg";
+import bru14 from "../components/UIUX/Projects/12.jpg";
+import bru15 from "../components/UIUX/Projects/13.jpg";
+import bru16 from "../components/UIUX/Projects/14.jpg";
+import bru17 from "../components/UIUX/Projects/15.jpg";
+import bru18 from "../components/UIUX/Projects/16.jpg";
+import bru19 from "../components/UIUX/Projects/17.jpg";
+import bru20 from "../components/UIUX/Projects/18.jpg";
+import bru21 from "../components/UIUX/Projects/19.jpg";
+import bru22 from "../components/UIUX/Projects/20.jpg";
+import bru23 from "../components/UIUX/Projects/21.jpg";
+import bru24 from "../components/UIUX/Projects/22.jpg";
+import bru25 from "../components/UIUX/Projects/23.jpg";
+import bru26 from "../components/UIUX/Projects/24.jpg";
+import bru27 from "../components/UIUX/Projects/25.jpg";
 
-
-
-
-import bru1 from "../components/UIUX/Projects/1.jpg"
-import bru2 from "../components/UIUX/Projects/2.jpg"
-import bru3 from "../components/UIUX/Projects/26.jpg"
-import bru4 from "../components/UIUX/Projects/27.jpg"
-import bru5 from "../components/UIUX/Projects/3.jpg"
-import bru6 from "../components/UIUX/Projects/4.jpg"
-import bru7 from "../components/UIUX/Projects/5.jpg"
-import bru8 from "../components/UIUX/Projects/6.jpg"
-import bru9 from "../components/UIUX/Projects/7.jpg"
-import bru10 from "../components/UIUX/Projects/8.jpg"
-import bru11 from "../components/UIUX/Projects/9.jpg"
-import bru12 from "../components/UIUX/Projects/11.jpg"
-import bru13 from "../components/UIUX/Projects/10.jpg"
-import bru14 from "../components/UIUX/Projects/12.jpg"
-import bru15 from "../components/UIUX/Projects/13.jpg"
-import bru16 from "../components/UIUX/Projects/14.jpg"
-import bru17 from "../components/UIUX/Projects/15.jpg"
-import bru18 from "../components/UIUX/Projects/16.jpg"
-import bru19 from "../components/UIUX/Projects/17.jpg"
-import bru20 from "../components/UIUX/Projects/18.jpg"
-import bru21 from "../components/UIUX/Projects/19.jpg"
-import bru22 from "../components/UIUX/Projects/20.jpg"
-import bru23 from "../components/UIUX/Projects/21.jpg"
-import bru24 from "../components/UIUX/Projects/22.jpg"
-import bru25 from "../components/UIUX/Projects/23.jpg"
-import bru26 from "../components/UIUX/Projects/24.jpg"
-import bru27 from "../components/UIUX/Projects/25.jpg"
-
-
-
-
-export const bruv=[bru1,bru2,bru5,bru6,bru7,bru8,bru9,bru10,bru11,bru12,bru13,bru14,bru15,bru16,bru17,bru18,bru19,bru20,bru21,bru22,bru23,bru24,bru25,bru26,bru27,bru3,bru4]
-
-
-
-
-
-
-
-
+export const bruv = [
+  bru1,
+  bru2,
+  bru5,
+  bru6,
+  bru7,
+  bru8,
+  bru9,
+  bru10,
+  bru11,
+  bru12,
+  bru13,
+  bru14,
+  bru15,
+  bru16,
+  bru17,
+  bru18,
+  bru19,
+  bru20,
+  bru21,
+  bru22,
+  bru23,
+  bru24,
+  bru25,
+  bru26,
+  bru27,
+  bru3,
+  bru4,
+];
 
 export const project2 = [
   p1,
@@ -237,4 +250,4 @@ export const mages = [
   mages22,
 ];
 
-export const cards=[card1,card2,card3,card4,card5,card6] 
+export const cards = [card1, card2, card3, card4, card5, card6];

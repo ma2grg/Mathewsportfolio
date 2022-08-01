@@ -11,18 +11,15 @@ import { motion } from "framer-motion";
 //function for adding
 
 function Home() {
-  // document.getElementsByClassName("row1")[0].addEventListener("hover", function() {alert("hi")});
-  return (
-    <div class='homepage  w-full h-full'>
+  return  (<motion.div 
+    // initial={{ opacity: 1,x:[0,22,0] }}
+    // animate={{ opacity: 1 }}
+    // exit={{ opacity: 0 }}
+    // animate={{ x: [0, 20, 0] ,opacity: 1}}
+    // transition={{ delay: 0.1 }}
+    transition={{ duration: 1 }}  class='homepage  w-full h-full'>
       <Link to='/typeof'>
         <motion.img
-          //    drag
-          // dragConstraints={{
-          //   top: -50,
-          //   left: -50,
-          //   right: 50,
-          //   bottom: 50,
-          // }}
           className='Homerows dd row1 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] hover:shadow-2xl row1 
         bg-[#04be6e] 
 
@@ -40,7 +37,13 @@ function Home() {
         />
       </Link>
       <Link to={`/motiongraphics`}>
-        <div className=''>
+      <motion.div 
+    initial={{ opacity: 1,x:[0,22,0] }}
+    // animate={{ opacity: 1 }}
+    // exit={{ opacity: 0 }}
+    animate={{ x: [0, 20, 0] ,opacity: 1}}
+    // transition={{ delay: 0.1 }}
+    transition={{ duration: 1 }} className=''>
           <motion.img
             id='mg'
             className='Homerows mg  bg-[#64689f]  row2 '
@@ -53,10 +56,11 @@ function Home() {
               document.getElementById("ui").style.transform = "translateX(-3%)";
             }}
           />
-        </div>
+        </motion.div>
       </Link>
       <Link to='/greetingcards'>
-        <div className=''>
+      <motion.div 
+     className=''>
           <motion.img
             id='ui'
             className='Homerows object-fill brightness-125 ui row3 bg-[#ae3236] '
@@ -70,10 +74,16 @@ function Home() {
               document.getElementById("ui").style.transform = "translateX(4%)";
             }}
           />
-        </div>
+        </motion.div>
       </Link>
       <Link to={`/about`}>
         <motion.img
+        initial={{ opacity: 1,x:[0,22,0] }}
+        // animate={{ opacity: 1 }}
+        // exit={{ opacity: 0 }}
+        animate={{ x: [0, -80, 0] ,opacity: 1}}
+        // transition={{ delay: 0.1 }}
+        transition={{ duration: 1 }}
           id='row4'
           className='Homerows about  row4 bg-[#fafafa] '
           src={mathews}
@@ -81,8 +91,8 @@ function Home() {
         />
       </Link>
       {/* <Enlarge/> */}
-    </div>
-  );
+    </motion.div>
+);
 }
 
 export default Home;

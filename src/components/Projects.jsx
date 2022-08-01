@@ -6,7 +6,14 @@ import "aos/dist/aos.css";
 import Hamburger from "hamburger-react";
 import { Link, useParams } from "react-router-dom";
 // import {  } from "module";
-import { bruv, cards, mages, project2, project4, projectrave } from "./projects.js";
+import {
+  bruv,
+  cards,
+  mages,
+  project2,
+  project4,
+  projectrave,
+} from "./projects.js";
 // console.log(images);
 
 const findproject = (prm) => {
@@ -16,9 +23,9 @@ const findproject = (prm) => {
   }
   if (prm.projects === "4") return project2;
   if (prm.projects === "21") return projectrave;
-  if(prm.projects==="22") return mages
-  if(prm.projects==="23") return cards
-  if(prm.projects==="31") return bruv
+  if (prm.projects === "22") return mages;
+  if (prm.projects === "23") return cards;
+  if (prm.projects === "31") return bruv;
   return project2;
 };
 
@@ -31,16 +38,15 @@ function Projects() {
   console.log(url, url, url);
   let linked = "/typeof";
   let url2 = "branding";
-  if(url === "23" || url==="4" || url==="42") {
+  if (url === "23" || url === "4" || url === "42") {
     url2 = "Digital Design";
     linked = "/typeof";
-  } else if (url === "22" || url==="21") {
+  } else if (url === "22" || url === "21") {
     url2 = "Branding";
     linked = "/motiongraphics";
   } else {
-    url2=" UI/UX "
+    url2 = " UI/UX ";
     linked = "/greetingcards";
-
   }
 
   const [state, setState] = React.useState(false);
