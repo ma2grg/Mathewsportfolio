@@ -8,7 +8,7 @@ import TypeOf from "./components/Enlargecomponents/TypeOf";
 import Motiongraphic from "./components/Enlargecomponents/Motiongraphic";
 import GreetingCard from "./components/Enlargecomponents/Greetingcards";
 import Projects from "./components/Projects.jsx";
-import ProjectContainer from"./components/ProjectContainer"
+import ProjectContainer from "./components/ProjectContainer";
 import Brands from "./components/Enlargecomponents/Brand";
 import Brands1 from "./components/Branding/1.jsx";
 import Brands2 from "./components/Branding/2.jsx";
@@ -45,10 +45,7 @@ function App() {
 
         <Route path='/digitaldesign1' element={<DD1 />} />
 
-
-
-
-        <Route path="/projectsbucket/:id" element={<ProjectContainer />} />
+        <Route path='/projectsbucket/:id' element={<ProjectContainer />} />
 
         <Route path='/motiongraphics' element={<Motiongraphic />} />
         <Route path='/greetingcards' element={<GreetingCard />} />
