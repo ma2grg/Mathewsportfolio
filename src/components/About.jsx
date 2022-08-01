@@ -34,13 +34,13 @@ function About() {
 
   return (
     <div className='dark:bg-[#111111]'>
-       
       <div
         className=' md:hidden dark:bg-[#111111] flex flex-row items-center justify-between'
         style={{ marginLeft: "0%" }}>
-           <Link
+        <Link
           to='/'
-          className='m-4 my-2 md:inline border-2 rounded-3xl px-2 border-black dark:hover:bg-white transition duration-300 dark:hover:text-black dark:text-white dark:border-white hover:bg-black hover:text-white'>
+          style={{ fontSize: "20" }}
+          className=' dark:text-white md:inline text-2xl border-2 m-4 rounded-3xl transition ease-in-out duration-200 px-2 border-black dark:border-white dark:hover:text-black dark:hover:bg-white hover:bg-black hover:text-white'>
           {" "}
           Home
         </Link>
@@ -54,9 +54,8 @@ function About() {
         />
       </div>
       {open ? (
-        <div className='absolute right-0'>
+        <div className='absolute right-0 bg-red400'>
           {" "}
-          
           <Sidebar />
         </div>
       ) : null}
@@ -65,7 +64,8 @@ function About() {
         style={{ fontFamily: "Poppins" }}>
         <Link
           to='/'
-          className='hidden my-2 md:inline border-2 rounded-3xl px-2 border-black dark:hover:bg-white transition duration-300 dark:hover:text-black dark:text-white dark:border-white hover:bg-black hover:text-white'>
+          style={{ fontSize: "20" }}
+          className=' hidden md:inline text-xl border-2 my-4 rounded-3xl transition ease-in-out duration-200 px-2 border-black dark:border-white dark:text-white dark:hover:text-black dark:hover:bg-white hover:bg-black hover:text-white'>
           {" "}
           Home
         </Link>
@@ -82,9 +82,10 @@ function About() {
         </div> */}
         {state ? (
           <div
-            className='fixed top-0 h-full w-fit'
+            className='fixed  z-1 top-0 h-full w-fit'
             style={{
               right: 0,
+              zIndex: 1,
               top: 0,
               display: `${state ? "block" : "none"}`,
               transition: "ease-in-out",
@@ -120,13 +121,12 @@ function About() {
             </p>
             <p className='mt-12  md:w-4/6 dark:text-[#fafafa]'>
               An engineer turned designer trying to bridge the gap between
-           
               branding and interface design with 4 years of experience in
               digital design.
             </p>
           </div>
         </section>
-        <section className='pt-12'>
+        <section className='pt-12 '>
           <p
             className=' text-4xl md:text-5xl dark:text-[#fafafa]'
             style={{ fontWeight: "700", fontFamily: "poppins" }}>
@@ -267,7 +267,7 @@ function About() {
               <img
                 alt=''
                 src={tools}
-                className='w-2/3 m-auto md:m-1 mt-4 md:mt-10 h-full items-center'
+                className='w-2/3 m-auto md:m-1  mt-4 md:mt-10 h-full items-center'
               />
             </div>
           </div>
