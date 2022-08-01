@@ -22,7 +22,7 @@ function Sidebar({ mobile }) {
         transition: "200ms ease-in-out",
       }}>
       <div
-        className='flex flex-col items-end justify-center'
+        className='flex flex-col items-end justify-center bg-white'
         style={{ flex: 0.85 }}>
         <Link to='/'>
           <p
